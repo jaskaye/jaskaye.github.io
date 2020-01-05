@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jaskaye.github.io/"/>
-  <updated>2020-01-04T14:26:32.096Z</updated>
+  <updated>2020-01-05T12:47:50.103Z</updated>
   <id>https://jaskaye.github.io/</id>
   
   <author>
@@ -17,19 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>真正開始的第一步‘主題’</title>
-    <link href="https://jaskaye.github.io/2020/01/05/%E7%9C%9F%E6%AD%A3%E9%96%8B%E5%A7%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E2%80%98%E4%B8%BB%E9%A1%8C%E2%80%99/"/>
-    <id>https://jaskaye.github.io/2020/01/05/%E7%9C%9F%E6%AD%A3%E9%96%8B%E5%A7%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E2%80%98%E4%B8%BB%E9%A1%8C%E2%80%99/</id>
-    <published>2020-01-04T14:08:24.322Z</published>
-    <updated>2020-01-04T14:26:32.096Z</updated>
+    <title>添加Archives和About me</title>
+    <link href="https://jaskaye.github.io/2020/01/05/%E6%B7%BB%E5%8A%A0Archives%E5%92%8CAbout%20me/"/>
+    <id>https://jaskaye.github.io/2020/01/05/%E6%B7%BB%E5%8A%A0Archives%E5%92%8CAbout%20me/</id>
+    <published>2020-01-05T12:27:46.789Z</published>
+    <updated>2020-01-05T12:47:50.103Z</updated>
     
-    <content type="html"><![CDATA[<p>寶因為感冒而在11點就躺床上了。</p><p>我趁這個自己不會忍不住跑去找她玩的時候趕緊沉澱心情來弄一下Hexo的主題，感覺第一步的主題沒弄好，很多東西也就無法繼續下去。</p><p>在官網上逛了逛，原本以為隨意借一個簡潔的主題來修改一下就好，然後瞄到了Makito的Typography，不管是字體、標題、排版還是色彩搭配都很合口味。但是，點進去後並不是Typography的主題，而是更簡潔、更讓人喜愛的Journal.。</p><p>像是找到了命中之人的那種感覺，原本打開了幾個後備的主題立刻關掉了，官網的主題頁面也關掉。專注於第一次真正的主題克隆。</p><p>克隆主題很簡單，跟著Makito的教程很容易就搞定了。</p><p>只是心急如焚的我沒認真留意，換好了主題才發現自己換成了Typography。</p><p>嘲笑自己一聲，從Makito的Github主頁找到了Journal.的主題，重新再把簡單的步驟再走一次。</p><blockquote><p>First, <code>cd</code> into your Hexo root directory.</p></blockquote><p>這裡我是從自己的文件夾右鍵直接Git Bash。</p><blockquote><p>or npm i –save hexo-renderer-ejs hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-index hexo-generator-tag for npm users。</p></blockquote><p>這裡Makito是用標註的方式告訴使用npm方法的用戶們如果不是使用yarn的話應該怎樣操作，很貼心。於是我便打上npm install之後copy/paste上面的代碼。</p><blockquote><p>cd themes</p></blockquote><p>完成上一步後cd到themes的文件夾再繼續。</p><blockquote><p>git clone <a href="https://github.com/SumiMakito/hexo-theme-Journal.git" target="_blank" rel="noopener">https://github.com/SumiMakito/hexo-theme-Journal.git</a> journal</p></blockquote><p>開始克隆journal的主題到themes文件夾。</p><blockquote><p>cd journal</p></blockquote><p>完成後cd到journal的文件夾再繼續下一步。</p><blockquote><p>yarn install # or <code>npm i</code> for npm users</p></blockquote><p>最後完成安裝。</p><p>找主題花了10分鐘，期間摸魚跑去看視頻看了一個多小時，然後花了5分鐘克隆主題，再花5分鐘記錄一下。</p><p>現在踏入凌晨1點，差不多該是時候休息，然後再想想該如何定制化成為自己的主題。</p><p>感謝Makitoさん，身處網絡不好擅自推測性別，幸好日文不太存在這個問題。</p><p>只是簡單掃了幾眼Github的頁面和博客就覺得Makitoさん是個很厲害的人，希望什麼都半吊子的自己有天能夠達到這樣的水平。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><h4 id="Archives"><a href="#Archives" class="headerlink" title="Archives"></a>Archives</h4><p>By default, the ‘Archives’ entry will not appear in the navigation section. To show the ‘Archives’ in the navigation section, you will need to enable the archives explicitly in the theme-level <em>_config.yml</em>.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;archives: true</span><br></pre></td></tr></table></figure><p>The generation of archives will be done by <code>hexo-generator-archive</code>. So please ensure that it has been added as a dependency in your package.json.</p></blockquote><p><strong>↑根據Makitoさん的README文件增加了Aechives頁面。</strong></p><br><p>接著再Google了一下添加About me的教程。</p><blockquote><ul><li>生成 about 关于我页面</li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;hexo <span class="keyword">new</span> page about</span><br></pre></td></tr></table></figure></blockquote><p><strong>↑在根目錄Git Bash並生成about頁面</strong></p><blockquote><p>将 source/about/index.md 的内容修改为如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;---</span><br><span class="line">&gt;title: 关于我</span><br><span class="line">&gt;<span class="built_in">type</span>: <span class="string">"about"</span></span><br><span class="line">&gt;date: 2018-03-11 16:18:54</span><br><span class="line">&gt;comments: <span class="literal">false</span></span><br><span class="line">&gt;---</span><br><span class="line"></span><br><span class="line">&gt;关于你的描述......</span><br></pre></td></tr></table></figure><p>作者：未见哥哥<br>链接：<a href="https://www.jianshu.com/p/33bc0a0a6e90" target="_blank" rel="noopener">https://www.jianshu.com/p/33bc0a0a6e90</a><br>来源：简书</p></blockquote><p>完成添加以上兩個頁面</p><hr><p><strong>*→語法「空行」<code>&lt;br&gt;</code> GET! *</strong></p><p><strong>*→語法「加粗文字」<code>文字前後加雙星號</code> GET! *</strong></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;寶因為感冒而在11點就躺床上了。&lt;/p&gt;
+        &lt;blockquote&gt;
+&lt;h4 id=&quot;Archives&quot;&gt;&lt;a href=&quot;#Archives&quot; class=&quot;headerlink&quot; title=&quot;Archives&quot;&gt;&lt;/a&gt;Archives&lt;/h4&gt;&lt;p&gt;By default, the ‘Archives’ entry 
+      
+    
+    </summary>
+    
+    
+    
+      <category term="hexo" scheme="https://jaskaye.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>真正開始的第一步‘主題’</title>
+    <link href="https://jaskaye.github.io/2020/01/05/%E7%9C%9F%E6%AD%A3%E9%96%8B%E5%A7%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E2%80%98%E4%B8%BB%E9%A1%8C%E2%80%99/"/>
+    <id>https://jaskaye.github.io/2020/01/05/%E7%9C%9F%E6%AD%A3%E9%96%8B%E5%A7%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E2%80%98%E4%B8%BB%E9%A1%8C%E2%80%99/</id>
+    <published>2020-01-04T14:08:24.322Z</published>
+    <updated>2020-01-05T12:49:26.886Z</updated>
+    
+    <content type="html"><![CDATA[<p>系因為感冒而在11點就躺床上了。</p><p>我趁這個自己不會忍不住跑去找她玩的時候趕緊沉澱心情來弄一下Hexo的主題，感覺第一步的主題沒弄好，很多東西也就無法繼續下去。</p><p>在官網上逛了逛，原本以為隨意借一個簡潔的主題來修改一下就好，然後瞄到了Makito的Typography，不管是字體、標題、排版還是色彩搭配都很合口味。但是，點進去後並不是Typography的主題，而是更簡潔、更讓人喜愛的Journal.。</p><p>像是找到了命中之人的那種感覺，原本打開了幾個後備的主題立刻關掉了，官網的主題頁面也關掉。專注於第一次真正的主題克隆。</p><p>克隆主題很簡單，跟著Makito的教程很容易就搞定了。</p><p>只是心急如焚的我沒認真留意，換好了主題才發現自己換成了Typography。</p><p>嘲笑自己一聲，從Makito的Github主頁找到了Journal.的主題，重新再把簡單的步驟再走一次。</p><br><blockquote><p>First, <code>cd</code> into your Hexo root directory.</p></blockquote><p><strong>這裡我是從自己的文件夾右鍵直接Git Bash。</strong></p><br><blockquote><p>or npm i –save hexo-renderer-ejs hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-index hexo-generator-tag for npm users。</p></blockquote><p><strong>這裡Makito是用標註的方式告訴使用npm方法的用戶們如果不是使用yarn的話應該怎樣操作，很貼心。於是我便打上npm install之後copy/paste上面的代碼。</strong></p><br><blockquote><p>cd themes</p></blockquote><p><strong>完成上一步後cd到themes的文件夾再繼續。</strong></p><br><blockquote><p>git clone <a href="https://github.com/SumiMakito/hexo-theme-Journal.git" target="_blank" rel="noopener">https://github.com/SumiMakito/hexo-theme-Journal.git</a> journal</p></blockquote><p><strong>開始克隆journal的主題到themes文件夾。</strong></p><br><blockquote><p>cd journal</p></blockquote><p><strong>完成後cd到journal的文件夾再繼續下一步。</strong></p><br><blockquote><p>yarn install # or <code>npm i</code> for npm users</p></blockquote><p><strong>完成安裝。</strong></p><br><hr><p>找主題花了10分鐘，期間摸魚跑去看視頻看了一個多小時，然後花了5分鐘克隆主題，再花5分鐘記錄一下。</p><p>現在踏入凌晨1點，差不多該是時候休息，然後再想想該如何定制化成為自己的主題。</p><br><p>感謝Makitoさん，身處網絡不好擅自推測性別，幸好日文不太存在這個問題。</p><p>只是簡單掃了幾眼Github的頁面和博客就覺得Makitoさん是個很厲害的人，希望什麼都半吊子的自己有天能夠達到這樣的水平。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;系因為感冒而在11點就躺床上了。&lt;/p&gt;
 &lt;p&gt;我趁這個自己不會忍不住跑去找她玩的時候趕緊沉澱心情來弄一下Hexo的主題，感覺第一步的主題沒弄好，很多東西也就無法繼續下去。&lt;/p&gt;
 &lt;p&gt;在官網上逛了逛，原本以為隨意借一個簡潔的主題來修改一下就好，然後瞄到了Makito的T
       
@@ -37,6 +62,8 @@
     </summary>
     
     
+    
+      <category term="hexo" scheme="https://jaskaye.github.io/tags/hexo/"/>
     
   </entry>
   

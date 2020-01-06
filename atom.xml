@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jaskaye.github.io/"/>
-  <updated>2020-01-05T12:47:50.103Z</updated>
+  <updated>2020-01-06T07:17:11.643Z</updated>
   <id>https://jaskaye.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://jaskaye.github.io/2020/01/05/%E6%B7%BB%E5%8A%A0Archives%E5%92%8CAbout%20me/"/>
     <id>https://jaskaye.github.io/2020/01/05/%E6%B7%BB%E5%8A%A0Archives%E5%92%8CAbout%20me/</id>
     <published>2020-01-05T12:27:46.789Z</published>
-    <updated>2020-01-05T12:47:50.103Z</updated>
+    <updated>2020-01-06T07:17:11.643Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><h4 id="Archives"><a href="#Archives" class="headerlink" title="Archives"></a>Archives</h4><p>By default, the ‘Archives’ entry will not appear in the navigation section. To show the ‘Archives’ in the navigation section, you will need to enable the archives explicitly in the theme-level <em>_config.yml</em>.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;archives: true</span><br></pre></td></tr></table></figure><p>The generation of archives will be done by <code>hexo-generator-archive</code>. So please ensure that it has been added as a dependency in your package.json.</p></blockquote><p><strong>↑根據Makitoさん的README文件增加了Aechives頁面。</strong></p><br><p>接著再Google了一下添加About me的教程。</p><blockquote><ul><li>生成 about 关于我页面</li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;hexo <span class="keyword">new</span> page about</span><br></pre></td></tr></table></figure></blockquote><p><strong>↑在根目錄Git Bash並生成about頁面</strong></p><blockquote><p>将 source/about/index.md 的内容修改为如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;---</span><br><span class="line">&gt;title: 关于我</span><br><span class="line">&gt;<span class="built_in">type</span>: <span class="string">"about"</span></span><br><span class="line">&gt;date: 2018-03-11 16:18:54</span><br><span class="line">&gt;comments: <span class="literal">false</span></span><br><span class="line">&gt;---</span><br><span class="line"></span><br><span class="line">&gt;关于你的描述......</span><br></pre></td></tr></table></figure><p>作者：未见哥哥<br>链接：<a href="https://www.jianshu.com/p/33bc0a0a6e90" target="_blank" rel="noopener">https://www.jianshu.com/p/33bc0a0a6e90</a><br>来源：简书</p></blockquote><p>完成添加以上兩個頁面</p><hr><p><strong>*→語法「空行」<code>&lt;br&gt;</code> GET! *</strong></p><p><strong>*→語法「加粗文字」<code>文字前後加雙星號</code> GET! *</strong></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><h4><span id="archives">Archives</span></h4><p>By default, the ‘Archives’ entry will not appear in the navigation section. To show the ‘Archives’ in the navigation section, you will need to enable the archives explicitly in the theme-level <em>_config.yml</em>.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;archives: true</span><br></pre></td></tr></table></figure><p>The generation of archives will be done by <code>hexo-generator-archive</code>. So please ensure that it has been added as a dependency in your package.json.</p></blockquote><p><strong>↑根據Makitoさん的README文件增加了Aechives頁面。</strong></p><br><p>接著再Google了一下添加About me的教程。</p><blockquote><ul><li>生成 about 关于我页面</li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;hexo <span class="keyword">new</span> page about</span><br></pre></td></tr></table></figure></blockquote><p><strong>↑在根目錄Git Bash並生成about頁面</strong></p><blockquote><p>将 source/about/index.md 的内容修改为如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;---</span><br><span class="line">&gt;title: 关于我</span><br><span class="line">&gt;<span class="built_in">type</span>: <span class="string">"about"</span></span><br><span class="line">&gt;date: 2018-03-11 16:18:54</span><br><span class="line">&gt;comments: <span class="literal">false</span></span><br><span class="line">&gt;---</span><br><span class="line"></span><br><span class="line">&gt;关于你的描述......</span><br></pre></td></tr></table></figure><p>作者：未见哥哥<br>链接：<a href="https://www.jianshu.com/p/33bc0a0a6e90" target="_blank" rel="noopener">https://www.jianshu.com/p/33bc0a0a6e90</a><br>来源：简书</p></blockquote><p>完成添加以上兩個頁面</p><hr><p><strong>*→語法「空行」<code>&lt;br&gt;</code> GET! *</strong></p><p><strong>*→語法「加粗文字」<code>文字前後加雙星號</code> GET! *</strong></p><p>↑然後發現Typora有預設格式可選…Why bother?<del>(06.01.2020)</del></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;blockquote&gt;
-&lt;h4 id=&quot;Archives&quot;&gt;&lt;a href=&quot;#Archives&quot; class=&quot;headerlink&quot; title=&quot;Archives&quot;&gt;&lt;/a&gt;Archives&lt;/h4&gt;&lt;p&gt;By default, the ‘Archives’ entry 
+&lt;h4&gt;&lt;span id=&quot;archives&quot;&gt;Archives&lt;/span&gt;&lt;/h4&gt;&lt;p&gt;By default, the ‘Archives’ entry will not appear in the navigation section. To s
       
     
     </summary>
@@ -74,16 +74,17 @@
     <published>2020-01-01T13:02:26.000Z</published>
     <updated>2020-01-01T13:21:12.297Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="簡單記錄"><a href="#簡單記錄" class="headerlink" title="簡單記錄"></a>簡單記錄</h1><ul><li>step 1 ：hexo clean</li><li>step 2 ：hexo g</li><li>step 3 ：hexo s </li><li>step 4 ：hexo g</li><li>step 5 ：hexo d</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1><span id="簡單記錄">簡單記錄</span></h1><ul><li>step 1 ：hexo clean</li><li>step 2 ：hexo g</li><li>step 3 ：hexo s </li><li>step 4 ：hexo g</li><li>step 5 ：hexo d</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;簡單記錄&quot;&gt;&lt;a href=&quot;#簡單記錄&quot; class=&quot;headerlink&quot; title=&quot;簡單記錄&quot;&gt;&lt;/a&gt;簡單記錄&lt;/h1&gt;&lt;ul&gt;
+        &lt;h1&gt;&lt;span id=&quot;簡單記錄&quot;&gt;簡單記錄&lt;/span&gt;&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;step 1 ：hexo clean&lt;/li&gt;
 &lt;li&gt;step 2 ：hexo g&lt;/li&gt;
-&lt;li&gt;step
+&lt;li&gt;step 3 ：hexo s &lt;/li&gt;
+&lt;li&gt;step 4 ：hexo g&lt;/li
       
     
     </summary>
@@ -99,13 +100,13 @@
     <published>2020-01-01T12:47:14.827Z</published>
     <updated>2020-01-01T12:47:14.827Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h1><h2 id="Try-to-write-a-blog"><a href="#Try-to-write-a-blog" class="headerlink" title="Try to write a blog"></a>Try to write a blog</h2><p><span style="color:red">this text is red</span> 代码如下</p><blockquote><p><code>&lt;span style=&quot;color:red&quot;&gt;this text is red&lt;/span&gt;</code></p></blockquote><p>亦可以</p><p><font face="黑体" color = #0099ff size = 10>我是黑体字</font></p><p><code>&lt;font face=&quot;黑体&quot; color = #0099ff size = 10&gt;我是黑体字&lt;/font&gt;</code></p>]]></content>
+    <content type="html"><![CDATA[<h1><span id="text">Text</span></h1><h2><span id="try-to-write-a-blog">Try to write a blog</span></h2><p><span style="color:red">this text is red</span> 代码如下</p><blockquote><p><code>&lt;span style=&quot;color:red&quot;&gt;this text is red&lt;/span&gt;</code></p></blockquote><p>亦可以</p><p><font face="黑体" color="#0099ff" size="10">我是黑体字</font></p><p><code>&lt;font face=&quot;黑体&quot; color = #0099ff size = 10&gt;我是黑体字&lt;/font&gt;</code></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Text&quot;&gt;&lt;a href=&quot;#Text&quot; class=&quot;headerlink&quot; title=&quot;Text&quot;&gt;&lt;/a&gt;Text&lt;/h1&gt;&lt;h2 id=&quot;Try-to-write-a-blog&quot;&gt;&lt;a href=&quot;#Try-to-write-a-blog&quot; class
+        &lt;h1&gt;&lt;span id=&quot;text&quot;&gt;Text&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;try-to-write-a-blog&quot;&gt;Try to write a blog&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;this text i
       
     
     </summary>
@@ -121,7 +122,7 @@
     <published>2020-01-01T09:56:05.466Z</published>
     <updated>2020-01-01T09:56:05.466Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2><span id="quick-start">Quick Start</span></h2><h3><span id="create-a-new-post">Create a new post</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3><span id="run-server">Run server</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3><span id="generate-static-files">Generate static files</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     <summary type="html">
     

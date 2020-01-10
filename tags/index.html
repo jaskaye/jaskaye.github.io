@@ -4,11 +4,11 @@
 <html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>添加Archives和About me - Jas</title>
+    <title>標籤 - Jas</title>
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Jasmine">
-<meta name="description" content="記錄添加Archives和關於我的頁面過程">
+<meta name="description" content="A Blog Powered By Hexo">
 <meta name="keywords" content="">
 
 <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
@@ -20,7 +20,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?77755770">
+<link rel="stylesheet" href="/css/journal.css?26176449">
 
 <script src="/js/loadCSS.js"></script>
 <script>
@@ -78,7 +78,7 @@
                 關於我
             </a>
             
-            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+            <a class="a-block drawer-menu-item active" href="/tags/index.html">
                 標籤
             </a>
             
@@ -137,7 +137,7 @@
             關於我
         </a>
         
-        <a class="a-block nav-link-item false" href="/tags/index.html">
+        <a class="a-block nav-link-item active" href="/tags/index.html">
             標籤
         </a>
         
@@ -167,94 +167,129 @@
         </a>
 
         
+        
+
+        
+
+        
+        
     </div>
 </div>
-
-
 
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            <div class="post-head-wrapper-text-only"
-                 style="background-image: url('')">
-                <div class="post-title">
-                    添加Archives和About me
-                    <div class="post-meta">
-                        <time datetime="2020-01-05T12:27:46.789Z" itemprop="datePublished">
-                            2020-01-05 23:27
-                        </time>&nbsp;
-                        
-    
-                        
-                        
-                        <i class="material-icons" style="">label</i>
-                        
-                        <a href='/tags/hexo/'>hexo</a>
-                        
-                        
+        <a class="a-block">
+            <div class="post-item-wrapper post-item-wrapper-no-hover">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title post-item-title-small">
+                            標籤
+                        </div>
                     </div>
                 </div>
             </div>
-    
-            <div class="post-body-wrapper">
-                <div class="post-body">
-                    <blockquote>
-<h4><span id="archives">Archives</span></h4>
-<p>By default, the ‘Archives’ entry will not appear in the navigation section. To show the ‘Archives’ in the navigation section, you will need to enable the archives explicitly in the theme-level <em>_config.yml</em>.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;archives: true</span><br></pre></td></tr></table></figure>
-<p>The generation of archives will be done by <code>hexo-generator-archive</code>. So please ensure that it has been added as a dependency in your package.json.</p>
-</blockquote>
-<p><strong>↑根據Makitoさん的README文件增加了Aechives頁面。</strong></p>
-<br>
-<p>接著再Google了一下添加About me的教程。</p>
-<blockquote>
-<ul>
-<li>生成 about 关于我页面</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;hexo <span class="keyword">new</span> page about</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><strong>↑在根目錄Git Bash並生成about頁面</strong></p>
-<blockquote>
-<p>将 source/about/index.md 的内容修改为如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;---</span><br><span class="line">&gt;title: 关于我</span><br><span class="line">&gt;<span class="built_in">type</span>: <span class="string">"about"</span></span><br><span class="line">&gt;date: 2018-03-11 16:18:54</span><br><span class="line">&gt;comments: <span class="literal">false</span></span><br><span class="line">&gt;---</span><br><span class="line"></span><br><span class="line">&gt;关于你的描述......</span><br></pre></td></tr></table></figure>
-<p>作者：未见哥哥<br>
-链接：<a href="https://www.jianshu.com/p/33bc0a0a6e90" target="_blank" rel="noopener">https://www.jianshu.com/p/33bc0a0a6e90</a><br>
-来源：简书</p>
-</blockquote>
-<p>完成添加以上兩個頁面</p>
-<hr>
-<p>***→語法「空行」<code>&lt;br&gt;</code> GET! ***</p>
-<p>***→語法「加粗文字」<code>文字前後加雙星號</code> GET! ***</p>
-<p>↑然後發現Typora有預設格式可選…Why bother?<sub>(06.01.2020)</sub></p>
-<p>↑又發現Typora的預設語法跟Markdown不一樣？總之，最後還是用HTML語法搞定了下標。<sub>(07.01.2020)</sub></p>
-
+        </a>
+        
+        <a href="/tags/hexo/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            hexo
+                        </div>
+                    </div>
                 </div>
             </div>
-    
-            <nav class="post-pagination">
-    
-    <a class="newer-posts" href="/2020/01/07/Commenting/">
-        上一篇<br>Commenting
-    </a>
-    
-    <span class="page-number"></span>
-    
-    <a class="older-posts" href="/2020/01/05/%E7%9C%9F%E6%AD%A3%E9%96%8B%E5%A7%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E2%80%98%E4%B8%BB%E9%A1%8C%E2%80%99/">
-        下一篇<br>真正開始的第一步‘主題’
-    </a>
-    
-</nav>
+        </a>
+        
+        <a href="/tags/Markdown/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Markdown
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/tags/HTML/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            HTML
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/tags/The-L-word/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            The L word
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/tags/Lesbian/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Lesbian
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/tags/TV-Series/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            TV Series
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/tags/Problem/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            Problem
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="/tags/代碼/" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title">
+                            代碼
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
 
-    
-            
-
-<div class="post-comment-wrapper">
-    <div id="disqus_thread"></div>
-</div>
-
-
-        </div>
+        
     </div>
+
     <div class="single-column-footer">
     Proudly published with Hexo<br>
     
@@ -275,23 +310,7 @@
         integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
         integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?72890005"></script>
-
-
-<script>
-    var disqus_shortname = 'kayejas';
-    var disqus_config = function () {
-        this.page.url = 'https://jaskaye.github.io/2020/01/05/添加Archives和About me/';
-        this.page.identifier = '/2020/01/05/添加Archives和About me/';
-    };
-    (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.body || d.head).appendChild(s);
-    })();
-</script>
-
+<script src="/js/journal.js?72501620"></script>
 
 </body>
 </html>

@@ -4,11 +4,11 @@
 <html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>Test - Jas</title>
+    <title>解決Typora本地圖片無法顯示的方法 - Jas</title>
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Jasmine">
-<meta name="description" content="Test">
+<meta name="description" content="本地圖片能同時在Typora和博客頁面上顯示">
 <meta name="keywords" content="">
 
 <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
@@ -20,7 +20,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?53051671">
+<link rel="stylesheet" href="/css/journal.css?27640435">
 
 <script src="/js/loadCSS.js"></script>
 <script>
@@ -170,13 +170,25 @@
             <div class="post-head-wrapper-text-only"
                  style="background-image: url('')">
                 <div class="post-title">
-                    Test
+                    解決Typora本地圖片無法顯示的方法
                     <div class="post-meta">
-                        <time datetime="2020-01-10T13:05:00.000Z" itemprop="datePublished">
-                            2020-01-11 00:05
+                        <time datetime="2020-01-09T13:12:57.846Z" itemprop="datePublished">
+                            2020-01-10 00:12
                         </time>&nbsp;
                         
     
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/hexo/'>hexo</a>, 
+                        
+                        <a href='/tags/Markdown/'>Markdown</a>, 
+                        
+                        <a href='/tags/HTML/'>HTML</a>, 
+                        
+                        <a href='/tags/Problem/'>Problem</a>
+                        
                         
                     </div>
                 </div>
@@ -184,19 +196,68 @@
     
             <div class="post-body-wrapper">
                 <div class="post-body">
-                    <!-- toc -->
+                    <p>辛辛苦苦記錄下自己的筆記，在Typora上完美符合自己期望的排版部署到博客後問題一堆時真的很奔潰。</p>
+<p>不是全部圖片都無法顯示，就是Markdown或HTML代碼不兼容導致沒有展示預期中的效果。</p>
+<p>代碼起碼還能找其他語法來代替，圖片這一環真是花了我一個通宵的時間才解決 <s>（不虧是半桶水）</s> 。</p>
+<br>
+<p>首先描述一下我的操作環境和情況：</p>
 <ul>
-<li><a href="#123">123</a>
-<ul>
-<li><a href="#1321">1.321</a></li>
+<li>使用Typora編輯器來編寫博客。</li>
+<li>比起圖床，更偏向使用本地圖片。</li>
+<li>在Typora完美顯示的圖片無法在部署後的博客顯示可見。</li>
 </ul>
+<br>
+<p>Google了一番後發現不少人都遇到這個問題，大家也給予了不少解決方式。比較熱門的有“標籤插件”法、“相對路徑”法和“HTML插入”法。</p>
+<p>試過了各種各樣的教程，有些很複雜，要裝插件和改動各種代碼；有些很簡單，只需要簡單的操作。但是不管我怎麼試，不是只成功一半就是都失敗。</p>
+<p>最後成功的只有兩個方法：“相對路徑”法和“HTML插入”。</p>
+<p>HTML插入十分簡單，只需要一句代碼，無須多餘的操作。但它有個致命點，就是無法在Typora上即時顯示圖片。像我這類喜歡備份的人就無法把弄好的筆記導出成PDF。</p>
+<p>於是花了很多時間去研究“相對路徑”法，因為即使失敗了很多次，感覺理論上它是可以成功的，我只是還沒做對。</p>
+<br>
+<p>最後結合各種“相對路徑”法的教程和不斷折騰Typora後，成功讓本地圖片同時在Typora和博客上顯示。</p>
+<p>步驟：（1-2步教程參考<a href="https://merrier.wang/20190111/image-skills-in-hexo.html" target="_blank" rel="noopener">^1</a>）</p>
+<ol>
+<li>
+<blockquote>
+<p>通过配置 _config.yml 来生成文章目录:</p>
+</blockquote>
 </li>
-</ul>
-<!-- tocstop -->
-<h3><span id="123">123</span></h3>
-<h5><span id="1321">1.321</span></h5>
-<img src="/images//p2535640655.jpg">
-<p><img src="./Test.assets/p2437415773.jpg" alt="p2437415773"></p>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># _config.yml</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>
+<blockquote>
+<p>将 _config.yml 文件中的配置项 post_asset_folder 设为 true 后，执行命令 <span id="2"><code>$ hexo new post_name</code>，在 source/_posts 中会<span id="1">生成文章 post_name.md 和<strong>同名文件夹</strong> post_name。将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。</span></span></p>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](image_name.jpg)</span><br></pre></td></tr></table></figure>
+<p>如果完成上述步驟後並不能顯示圖片或者只有Typora能夠顯示而博客不能的話可以繼續往下做。</p>
+<ol start="3">
+<li>在“偏好設置”中把“圖像”的“優先使用相對路徑”勾上。</li>
+</ol>
+<p><img src="3.png" alt></p>
+<br>
+<ol start="4">
+<li>在文章頂部添加代碼 → <code>typora-root-url: ..\_posts\跟文章同名的文件夾</code></li>
+</ol>
+<p><b>*這裡要注意，最好<a href="#2">用Git寫代碼</a>來新建文章，這樣才會產生<a href="#1">第2步驟</a>中的“生成同名文件夾”。當然也可以後期自己添加同名文件夾，但能夠省一點時間。</b></p>
+<p>*<strong>還有雖然這裡的title跟typora-root-url中的名字不一樣，但實際的.md文件仍然是“Test”，這樣才能讓Typora知道要去哪裡讀取圖片。</strong></p>
+<p><img src="4.png" alt></p>
+<br>
+<p>5.圖片插入代碼 →<code> ![](想插入的圖片名稱.jpg)或者(./想插入的圖片名稱.jpg)</code></p>
+<p>*這裡圖片的路徑加不加&quot;./&quot;都可以，只要能顯示圖片就行。</p>
+<br>
+<p>6.確定圖片有顯示後，hexo g和hexo s確保圖片能夠顯示在博客上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<br>
+<p>7.如果博客頁面上也能夠顯示圖片的話就可以進行部署了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<br>
+<p>這個方法的缺點是系統會自動把你同名文件夾下的圖片全部複製一份到public文件夾下，等於是分了兩個部分去讀取圖片：第一步是Typora讀取本地圖片，第二步是博客讀取要展示在網頁的圖片。但有得必有失，如果不想壓縮圖片的話就準備個大一點的硬盤吧。</p>
+<br>
+<p>最後附上HTML插入圖片的教程作為後備方法 ↓</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&quot;&#x2F;images&#x2F;myImage.png&quot; width&#x3D;50% height&#x3D;50% align&#x3D;center&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<p>教程參考<a href="%5Bhttps://steflerjiang.github.io/2016/12/20/Hexo%E6%A1%86%E6%9E%B6%E4%B8%8B%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/%5D(https://steflerjiang.github.io/2016/12/20/Hexo%E6%A1%86%E6%9E%B6%E4%B8%8B%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/)">^2</a></p>
 
                 </div>
             </div>
@@ -245,14 +306,14 @@
         integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
         integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?34814400"></script>
+<script src="/js/journal.js?7929855"></script>
 
 
 <script>
     var disqus_shortname = 'kayejas';
     var disqus_config = function () {
-        this.page.url = 'https://jaskaye.github.io/2020/01/11/Test/';
-        this.page.identifier = '/2020/01/11/Test/';
+        this.page.url = 'https://jaskaye.github.io/2020/01/10/Test/';
+        this.page.identifier = '/2020/01/10/Test/';
     };
     (function () {
         var d = document, s = d.createElement('script');

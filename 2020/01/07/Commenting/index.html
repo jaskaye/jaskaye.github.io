@@ -22,7 +22,7 @@ The theme Journal. natively supports two comm...">
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?1507931">
+<link rel="stylesheet" href="/css/journal.css?12604758">
 
 <script src="/js/loadCSS.js"></script>
 <script>
@@ -194,9 +194,8 @@ The theme Journal. natively supports two comm...">
                 <div class="post-body">
                     <blockquote>
 <p>Commenting</p>
-<p>The theme <em>Journal.</em> natively supports two commenting services – <a href="https://www.livere.com/" target="_blank" rel="noopener">Livere</a> and <a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a>. To enable commenting, you just need to add <strong>one of</strong> the following lines to the <em>_config.yml</em> <strong>in theme *Journal.*‘s directory</strong>.</p>
+<p>The theme <em>Journal.</em> natively supports two commenting services – <a href="https://www.livere.com/" target="_blank" rel="noopener">Livere</a> and <a href="https://disqus.com/" target="_blank" rel="noopener">Disqus</a>. To enable commenting, you just need to add <strong>one of</strong> the following lines to the <em>_config.yml</em> <strong>in theme *Journal.*'s directory</strong>.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">livere: [data-uid] on livere.com</span><br><span class="line">disqus: [short_name] on disqus.com</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>If two fields are <strong>both left non-empty</strong>, two comment boxes will appear. To fix this, just leave one of the two fields empty.</p>
 </blockquote>
@@ -204,16 +203,16 @@ The theme Journal. natively supports two comm...">
 <p>Makitoさん的README上雖然有教程，但別說出現兩個評論框了，我一個評論框都沒有出現（苦笑）。而且Archives和About me還會消失。</p>
 <p>不管把short name放在框內還是不要框都一樣，到底是哪裡出了錯？</p>
 <br>
-
 <blockquote>
 <p>在<code>主题配置文件</code>(_config.yml)文件中找到以下代码，添加你Disqus设置的Website Name在shortname处，英文冒号后空格。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Duoshuo ShortName</span></span><br><span class="line"><span class="comment">#duoshuo_shortname:</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#添加在这里</span></span><br><span class="line"><span class="comment"># Disqus </span></span><br><span class="line">disqus:</span><br><span class="line"><span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">shortname: deppwang    <span class="comment">#your name</span></span><br><span class="line">count: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Hypercomments</span></span><br><span class="line"><span class="comment">#hypercomments_id:</span></span><br></pre></td></tr></table></figure>
-
-<p>作者：DeppWang<br>链接：<a href="https://www.jianshu.com/p/d68de067ea74" target="_blank" rel="noopener">https://www.jianshu.com/p/d68de067ea74</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>作者：DeppWang<br>
+链接：<a href="https://www.jianshu.com/p/d68de067ea74" target="_blank" rel="noopener">https://www.jianshu.com/p/d68de067ea74</a><br>
+来源：简书<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 </blockquote>
 <p>在網上找到這位作者的教程，從頭到尾跟著做一遍仍然是一樣沒有出現評論框。<sub>（07.01.2020）</sub></p>
 <br>
-
 <p>反復研究了Makitoさん在Github頁面上的教程，來來回回改了好幾次語法，搗弄了很久還是不行。幾乎要放棄的時候抱著最後一絲希望打開了更新過的config.yml文件，看了一眼關於Disqus的那一行…</p>
 <p>原來Makitoさん為了避免混亂早就把<code>disqus: [short_name] on disqus.com</code>改成了<code>disqus: # [short_name] for disqus.com</code> ！</p>
 <p>我還傻乎乎地改回去並混淆了自己，還想著到底是要打on Disqus還是for Disqus，實際上根本就無所謂。看來Markdown的基礎語法還不夠熟悉。</p>
@@ -266,7 +265,7 @@ The theme Journal. natively supports two comm...">
         integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
         integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?23585738"></script>
+<script src="/js/journal.js?236502"></script>
 
 
 <script>

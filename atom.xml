@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jaskaye.github.io/"/>
-  <updated>2020-01-11T03:54:14.864Z</updated>
+  <updated>2020-01-11T04:00:53.519Z</updated>
   <id>https://jaskaye.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://jaskaye.github.io/2020/01/11/some/"/>
     <id>https://jaskaye.github.io/2020/01/11/some/</id>
     <published>2020-01-11T03:43:08.000Z</published>
-    <updated>2020-01-11T03:54:14.864Z</updated>
+    <updated>2020-01-11T04:00:53.519Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="./3.png" alt></p><img src="3.png" align="center/">]]></content>
+    <content type="html"><![CDATA[<p><img src="/_posts/Test/4.PNG" alt="4"></p><img src="3.png" align="center/">]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;./3.png&quot; alt&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;img src=&quot;/_posts/Test/4.PNG&quot; alt=&quot;4&quot;&gt;&lt;/p&gt;
 &lt;img src=&quot;3.png&quot; align=&quot;center/&quot;&gt;
       
     

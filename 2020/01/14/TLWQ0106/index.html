@@ -1,0 +1,888 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>I am your family, you know. - Jas</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Jasmine">
+<meta name="description" content="The L word Generation Q 第6集觀後筆記">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?34636576">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://jaskaye.github.io">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                標籤
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/categories/index.html">
+                分類
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Jas
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Jas</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Jas’s
+        </div>
+        <div class="nav-subtitle">
+            記
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            標籤
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/categories/index.html">
+            分類
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('/2020/01/14/TLWQ0106/the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001824.333.jpg')">
+                <div class="post-title">
+                    I am your family, you know.
+                    <div class="post-meta">
+                        <time datetime="2020-01-14T04:23:20.000Z" itemprop="datePublished">
+                            2020-01-14 15:23
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/觀影-讀後筆記/'>觀影/讀後筆記</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/The-L-word/'>The L word</a>, 
+                        
+                        <a href='/tags/Lesbian/'>Lesbian</a>, 
+                        
+                        <a href='/tags/TV-Series/'>TV Series</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><a href="#ML2"><center><b>Tina &amp; Bette</b></center></a></p>
+<p><a href="#ML2_1"><center>Our daughter</center></a></p>
+<p><a href="#ML2_2"><center>Because you’re never wrong.</center></a></p>
+<p><a href="#ML2_3"><center>I thought you were my family.</center></a></p>
+<p><a href="#ML2_4"><center>I didn’t think that I could find myself unless I left.</center></a></p>
+<p><a href="#ML2_5"><center>Please don’t go, please.</center></a></p>
+<p><a href="#ML3"><center><b>Dani &amp; Sophie</b></center></a></p>
+<p><a href="#ML4"><center><b>Alice + Nat + Gigi</b></center></a></p>
+<hr>
+<center>這一集的重點，只有一個：</center>
+### <span id="ML1"><center><b><font size="10">TINA！</font></b></center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_000539.929.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_000541.805.jpg" height="80%" width="80%"></center>
+<center><sub>00:05:39</sub></center>
+<center>每集活在台詞中的人終於出現了！</center>
+<br>
+<p>Bette為了保護Angie而錯手推倒Felicity的丈夫，遭受到媒體圍攻的她正處於心理脆弱的時候。清楚知道Bette現在需要誰陪伴的Angie打電話把身處遠方的Tina請了過來，我只想說一句Angie你不虧是她們的女兒！！</p>
+<hr>
+<h3><span id="tina-amp-bette"><span id="ML2"><b>Tina &amp; Bette</b></span></span></h3>
+<h4><span id="our-daughter"><span id="ML2_1"><center><b>Our daughter</b></center></span></span></h4>
+<p>記得以前看TLW，兩人在跟嬰兒時期的Angie自從Mama T和Mama B的時候，我就在幻想，幻想著Angie長大後兩人的生活。在第一集Angie說出口Mama T的時候我就已經想淚目了，想不到今天還能看到她們坐在一起討論Angie的事。</p>
+<blockquote>
+<p>Tina: How was the play? <sub>00:08:41</sub></p>
+<p>Bette: Which part?</p>
+<p>Tina: Well, was Jordi good? Angie said she was nervous.</p>
+<p>Bette: She was great… but…</p>
+<p>Tina: What?</p>
+<p>Bette: I don’t know how I feel about her.</p>
+<p>Tina: What do you mean?</p>
+<p>Bette: She makes me nervous.</p>
+<p>Tina(laugh): Well, anyone that likes <strong>our daughter</strong> is gonna make us nervous.</p>
+<p>Bette: Do you think they’ve had sex?</p>
+<p>Tina: No. They haven’t even kissed yet.</p>
+<p>Bette: Oh. Good. Well, that’s one thing I’ve done right, I guess.</p>
+<p>Tina: You are doing a lot right.<span id="T1"><sup><a href="#T1_1">[T1]</a></sup></span></p>
+</blockquote>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_000844.049.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_000857.422.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_000859.318.jpg" height="80%" width="80%"></center>
+Tina還是那麼溫柔、親切，從她清楚Angie的感情狀況來看就知道她是那種和孩子是朋友的媽媽。而在這一幕中，述說完事情經過後的Bette陷入“哭笑不得”的狀態，Tina伸手想要安慰她時又在快要碰到她手臂的瞬間縮回，適逢電話響起，兩人對話中斷。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001055.488.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001055.695.jpg" height="80%" width="80%"></center>
+不同於前一通電話的客氣，現在那頭似乎是Tina的另一半，Bette聽著Tina跟對方的對話，搖了搖頭，不知道是在嘲笑自己剛才的示弱還是在甩走一些不切實際的想法？
+<blockquote>
+<p>Tina: I’m sorry I didn’t call you before I left. It’s not a good time. Can I call you back? <sub>00:11:12</sub></p>
+</blockquote>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001113.628.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001117.950.jpg" height="80%" width="80%"></center>
+<br>
+<p>隨後，兩人收到Angie通過車試的時候再度愉快地分享著彼此教導Angie時的狀況。</p>
+<blockquote>
+<p>Tina: You know, I hated teaching her. I just panicked the whole time. <sub>-00:18:09</sub></p>
+<p>Bette: She got so mad when I was teaching how to parallel park that she actually made me get out of the car and watch her do it from the other side of the parking lot.</p>
+<p>Tina: Oh, my God, she is so much like you.</p>
+<p>Bette: You, too.</p>
+<p>Bette(sign): I hope I haven’t just screwed her up.</p>
+<p>Tina: You are a good mom. <span id="T2"><sup><a href="#T2_1">[T2]</a></sup></span></p>
+<p>Bette: So are you.</p>
+</blockquote>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001824.333.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001843.416.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001847.955.jpg" height="80%" width="80%"></center>
+<br>
+<h4><span id="because-youre-never-wrong"><span id="ML2_2"><center><b>Because you’re never wrong.</b></center></span></span></h4>
+<p>兩人愉快的討論沒有維持太久，爭辯又開始了。</p>
+<p>Tina感慨Bette能夠為Angie改變，成為願意給予空間的人，而自己當初即使強烈要求也爭取不到多一點的退讓。</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001910.419.jpg" height="80%" width="80%"></center></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001914.900.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001916.363.jpg" height="80%" width="80%"></center>
+<center><font size="2"><b>這歎氣的模樣，感覺兩人已經為此爭吵過無數次</b></font></center>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001921.682.jpg" height="80%" width="80%"></center>
+<center><font size="2"><b>"sooooo much space." Tina拉長音的這句，感覺她真的對這件事超級怨念</b></font></center>
+Bette反駁說自己一直知道自己想要的是什麼，所以才選擇堅持，並不覺得自己需要為此道歉。Tina也表示不需要她的道歉，只是自己曾把她的工作和感受放在首位而不得不犧牲了自己的某些意願。可以感覺到Bette也壓抑著想要吵架的情緒，她打斷Tina說自己從來沒有要求過她這樣做，Tina也連忙回應說“你不用說出口，因為所有的事情都按照你的意願、你的計劃在進行。”，她沒有說不的權利。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001941.885.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001945.136.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001946.777.jpg" height="80%" width="80%"></center>
+Bette搖頭，不覺得Tina說得對。Tina失笑，毫不意外她會這樣說，因為她從來不會犯錯。Bette這才爆粗反駁說你看清楚我周圍發生什麼事，我沒一件事是做對的。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001949.138.jpg" height="80%" width="80%"></center>
+</p>
+<p><span id="T3"><center><a href="#T3_1"><b>↓</b></a></center></span></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001952.296.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001953.432.jpg" height="80%" width="80%"></center>
+</p>
+<p><span id="T4"><center><a href="#T4_1"><b>↓</b></a></center></span></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001955.098.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Tina: 'm just glad that you were able to create so much space for her. <sub>-00:18:56</sub></p>
+<p>Bette: Of course.</p>
+<p>Tina: (laugh)</p>
+<p>Bette: What?</p>
+<p>Tina: Nothing. You just… That doesn’t come natural to you.</p>
+<p>Bette: What are you saying?</p>
+<p>Tina: <strong>You could never do that for me.</strong> You just… took up so much space.</p>
+<p>Bette: (exhales)You know, for as long as I can remember, I’ve been able to identify what I want and I’ve been willing to pursue it. Do you really think I should apologize for that?</p>
+<p>Tina: I’m not asking you to apologize. But <strong>I definitely put your career first, your feeling first–</strong></p>
+<p>Bette: I never asked you to do that.</p>
+<p>Tina: You didn’t have to. Everything was on your timeline, on your terms.</p>
+<p>Bette: I don’t think that’s fair.</p>
+<p>Tina: Of course you don’t. <strong>Because you’re never wrong.</strong></p>
+<p>Bette: Look around. <strong>I am wrong all the fucking time.</strong></p>
+</blockquote>
+<br>
+<p>Tina自從進門之後，每當Bette懷疑自己，Tina就會給予她<span id="T1_1">鼓勵，讓她知道她不止<span id="T1_1"><a href="#T1">只做對一件事</a>和她是個<span id="T2_1"><a href="#T2">好媽媽</a>。但是上面那句<span id="T3_1"><a href="#T3">&quot;Because you’re never wrong&quot;</a> 跟前面兩句鼓勵不一樣，Bette當母親沒有問題、她的人格、她的很多決定都沒有錯，可是這一句“你從來沒有出錯”卻並不是鼓勵她的話，而是指她的霸道、她的自信讓她從來不覺得自己有做錯任何事，就算有也不肯認錯。而Bette的<span id="T4_1"><a href="#T4">&quot;回應&quot;</a> 很諷刺，諷刺她自己即使再不肯認錯，現實還是會逼她承認並折磨著她。（個人覺得著Look around也把Tina包括進去了。）</span></span></span></span></span></p>
+<br>
+<h4><span id="i-thought-you-were-my-family"><span id="ML2_3"><center><b>I thought you were my family.</b></center></span></span></h4>
+<p>Tina似乎這才意識到不應該在這時候指責Bette，兩人沉默。Bette擦身而去，Tina猶豫了幾秒，最後還是忍不住問出口Bette還有沒有和Felicity在一起。Bette回答說昨天在這件事發生前已經分手，應該早點結束的。Tina點著頭在Bette準備轉身離開時，嗆了她一句，那會幫上大忙。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001959.754.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002001.081.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002002.560.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002009.911.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002013.898.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002016.840.jpg" height="80%" width="80%"></center>
+Bette頓時停下腳步，回過頭來。眼神充滿了"Excuse Me?!"的感覺，但Tina沒有迴避、沒有解釋、沒有退縮，偏了偏頭，一臉"我有說錯嗎？"地直視回去。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002018.509.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002020.342.jpg" height="80%" width="80%"></center>
+這時Bette為兩人糾纏不清的關係解釋，說當Kit離世時是Felicity陪在自己身旁。Tina淡淡說著希望自己那時能夠陪伴她，Bette有點指責性地說她連Kit的葬禮也不願意出席。Tina解釋自己只想保護她，因為那時兩人剛離婚，自己才剛離開她，如果在那個時間點回去只會讓彼此的關係變得複雜，讓她更難過。言下之意是不想在那個時候給Bette能夠復合的假希望，不想讓她再度失去什麼。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002028.370.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002041.715.jpg" height="80%" width="80%"></center>
+Bette覺得她的理由爛透了，Tina沒有繼續維護自己，理性地說我們那時需要空間。Bette糾正她，說是她需要空間而已。Tina愣了一秒，也許是覺得Bette沒有說錯，於是接受了她的糾正，點頭承認那時是自己需要空間。Bette沒有因為Tina的“認輸”而沾沾自喜，那一臉錯愕的表情反倒像是被Tina的話傷到了。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002046.920.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002048.650.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002050.892.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002053.901.jpg" height="80%" width="80%"></center>
+</p>
+<p>沉默了足足兩秒的她也許在腦中閃過了各種話語，最後衝出口的是：你當時應該出現的，我以為你是我的家人。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002056.430.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002101.587.jpg" height="80%" width="80%"></center>
+</p>
+<p>Wow，總覺得Bette這句是故意說出來傷Tina的，並且說完就轉頭離開，不讓Tina有反駁機會。</p>
+<p>Tina的表情從不可思議、嘗試不放在心上到無奈苦笑，最後痛得皺眉。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002106.014.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002107.096.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002107.794.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002109.225.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002110.226.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002110.810.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Tina: Are you still seeing that woman? <sub>-00:20:02</sub></p>
+<p>Bette: I broke up with her yesterday. Before any of this even happened. Just should’ve done it sooner.</p>
+<p>Tina: That would have been helpful.</p>
+<p>Bette: You know, Felicity was there for me when Kit died.</p>
+<p>Tina: I wish I could’ve been there.</p>
+<p>Bette: You could have at least come to the funeral.</p>
+<p>Tina: <strong>I would have made it harder for you.</strong> I was trying to protect you.</p>
+<p>Bette: How was that protecting me?</p>
+<p>Tina: We had just gotten divorced. I had just left. <strong>It would have been very confusing if I had shown up.</strong></p>
+<p>Bette: Such a bullshit excuse.</p>
+<p>Tina: We needed that space.</p>
+<p>Bette: <strong>You needed that space.</strong></p>
+<p>Tina: <strong>I needed that space.</strong></p>
+<p>Bette: You should have been there. I thought you were my family.</p>
+</blockquote>
+<br>
+<p>這裡真的心疼Tina。</p>
+<p>如Tina自己所說的，在跟Bette分開之前她都會把Bette的感覺放在第一位。所以她會習慣性地安撫她，以她的心情為先。即使Kit過世，不管是站在朋友的身份還是站在曾經的家人身份，Tina都一定會出席。記得在TLW裡有好幾段都是這樣，Tina在理性和感性間掙扎著，最後還是選擇站在Bette身旁。但是離婚後她知道如果再做一樣的選擇，她們又會莫名其妙地復合，而這不是當時十分需要個人空間的Tina所希望的。</p>
+<p>曾經如此看重Bette的Tina又怎麼可能不把她當作家人看待，所以她才會站在這裡（雖然有一部分原因也是因為Angie打電話給她），即使她內心還沒原諒Bette的出軌（從不願意直呼Felicity的名字看出）。然而Bette自己也才剛說過自己沒有要求過Tina把自己的工作、感受放在第一位，這裡卻打臉自己說出&quot;You should have been there. &quot;這樣的話，下一句的&quot;I thought you were my family.&quot;又否定了Tina默默為她著想的心意。</p>
+<br>
+<p>加多一句題外話，Bette每次提起和Felicity無法分開都是因為Kit離去時她陪伴身側為理由。確定無法狠下心分手不是因為報恩和寂寞嗎？</p>
+<br>
+<h4><span id="i-didnt-think-that-i-could-find-myself-unless-i-left"><span id="ML2_4"><center><b>I didn’t think that I could find myself unless I left.</b></center></span></span></h4>
+<p>晚上Angie和Tina聊天，Angie很高興能夠跟她分享身邊發生的大小事。Tina聽得津津有味，還感慨自己一直錯失見證她的生活的機會。於是Angie就問那麼為什麼你要繼續錯失機會下去？Tina頓了頓，嘗試跟她解釋自己必須離開她身邊的原因。Tina以Angie正在探索自己是誰的角度出發，而她自己並沒有在對的時間經歷這一段，所以後面花了很多時間去探索自己到底是誰。再者她和Bette相遇的時候太過年輕，在這段戀情中迷失了自己（因為Bette的存在感和性格太強，TLW中前期Tina基本上是以她為天）。所以Tina當時覺得她必須離開她們才能正在去尋找自我（應該是因為Bette無法給予她尋找自我的空間）。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003815.626.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003825.218.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003829.635.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003832.350.jpg" height="80%" width="80%"></center>
+<center><font size="2"><b>太愛有歷史的戀情，這段述說真是讓我很想重溫TLW，去看她們年輕時的相愛過程~</b></font></center>
+<blockquote>
+<p>Tina: I keep missing everything. <sub>-00:37:22</sub></p>
+<p>Angie: Why do you have to ? Like, really, though, why?</p>
+<p>Tina: Uh…Okay. You know how right now you’re trying to figure out a lot of things about yourself? Like what you want, what you want to do, who you want to be with? And that can be pretty hard, right?</p>
+<p>Angie: Yeah, yeah. really hard.</p>
+<p>Tina: Well… you’re doing it when you’re supposed to. And I… I didn’t do that. I didn’t do that at the right time. It took me a long time to figure out who I was. And <strong>I met your mom when I was really young. We fell in love, and that was wonderful.</strong> But somehow I got lost. <strong>And I didn’t think that I could find my self unless I left.</strong> Does that make sense?</p>
+<p>Angie: Yeah, I think so.</p>
+</blockquote>
+<p>Angie聽完後點頭表示明白，Tina繼續說希望她擁有兩個完整的“母母”，而她當時感覺自己並不完整，很抱歉尋找自我意味著要離她很遠，希望她理解。而Angie真的是個好孩子，尊重她的兩位母親，並用自己的方法去幫助她們。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003842.362.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003847.486.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003854.283.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003859.036.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003905.184.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003906.027.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003910.391.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003918.836.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003921.907.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003927.245.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003930.846.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Tina: I wanted you to have two whole parents. Not one and a half. And I felt like half of a person. I’m sorry that it meant that I had to be so far away from you. <strong>Cause you make me happier than anyone in the whole world. And I miss you.</strong> I miss you all the time. I miss you so much. <sub>-00:38:42</sub></p>
+<p>Angie: I miss you, too. I really do. I miss you all the time.</p>
+<p>Tina: Is that why you called?</p>
+<p>Angie: No. <strong>I called you cause I thought B needed you.</strong></p>
+<p>Tina: Okay. I’m glad you’re okay.</p>
+</blockquote>
+<br>
+<h4><span id="please-dont-go-please"><span id="ML2_5"><center><b>Please don’t go, please.</b></center></span></span></h4>
+<p>最後，Bette給出了她的不退選聲明，暫時解決了這件事。兩人在陪伴Angie入睡後，Tina帶著行李準備離開，臨走前告訴Bette自己會在她需要時候出現，Bette向她道謝。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004619.372.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005030.496.jpg" height="80%" width="80%"></center>
+</p>
+<p>Tina回應了她的那句&quot;I thought you were family.&quot;，Bette半是慚愧半是感動地點了點頭。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005040.222.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005047.783.jpg" height="80%" width="80%"></center>
+</p>
+<p>Tina繼續說，“I love you.”（家人感覺）。Bette欲言又止地點了點頭，同樣回應&quot;I love you.&quot;。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005050.609.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005052.018.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005052.675.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005055.084.jpg" height="80%" width="80%"></center>
+</p>
+<p>Tina主動擁抱Bette道別，接觸到身體的瞬間Bette就情不自禁地閉上眼，深呼吸一口Tina的髮香。在Tina要放手的時候，Bette反倒把她抱緊了，請求她不要離開。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005059.639.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005059.891.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005100.678.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005102.559.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005103.117.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005104.437.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005105.386.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005110.231.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005111.566.jpg" height="80%" width="80%"></center>
+<center><b><font size="2">無法從Tina的表情得知她到底是什麼感覺啊！不過這才看到Tina的右手無名指戴著戒指，是已經再婚了嗎？</font></b></center>
+<blockquote>
+<p>Tina: If you need anything, I’m here.<sub>-00:50:29</sub></p>
+<p>Bette: Thank you.</p>
+<p>Tina: <strong>I am your family, you know.</strong></p>
+<p>Bette: I know.</p>
+<p>Tina: I love you.</p>
+<p>Bette: I love you.</p>
+<p>Tina: Come here. (huge Bette)</p>
+<p>Bette(won’t let go): <strong>Please don’t go. Please.</strong></p>
+</blockquote>
+<br>
+<p>TLW是我的啟蒙劇，TB更是我飯的第一對CP。雖然我很喜歡很喜歡她們兩人，也很享受看她們之間的甜蜜相處，但說真的，她們復合未必是對的。</p>
+<p>Bette實在是太過強勢，蓋住了所有Tina的光芒。記得TLW中，我最喜歡中後期的Tina，因為她的事業心開始覺醒，獨立、有個人思想但仍然保持溫柔的她逐漸超過了Bette的存在。兩人之間能夠持續交往很多時候都是因為Tina的犧牲（想想Bette到底出軌了多少次），但只靠單方面的妥協絕對沒辦法長久的。而我也如兩人採訪那樣，想要見一見能夠把Tina帶離Bette身邊的人，對方一定是給予Tina足夠的空間和尊重才能贏得她的愛。</p>
+<p>雖然有點馬後炮，但我一直都不驚訝Tina會再度出場（畢竟Jennifer是製作人之一），而現在她真的出場了，如果她和Bette之間真的能夠找到一個平衡點復合的話當然是喜聞樂見。但如何沒有辦法的話，我寧願Tina只當Bette的家人。相愛容易，相處難啊。</p>
+<br>
+<hr>
+<h3><span id="dani-amp-sophie"><span id="ML3"><b>Dani &amp; Sophie</b></span></span></h3>
+<p>Dani和Sophie這對算是在各自開新線了吧？</p>
+<p>Sophie向Finley訴苦，一個感情出現問題，一個剛受完情傷。兩人走在一起，難免有種同是天涯淪落人的feel。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001156.621.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001200.671.jpg" height="80%" width="80%"></center>
+<center><sub>-00:11:56</sub></center>
+而Dani承受不住從父親和未婚妻那邊共同的施壓，只想把全幅心思都放在Bette身上。身邊的人都看得出，就只有她自己還未醒悟。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001427.886.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001429.944.jpg" height="80%" width="80%"></center>
+<center><font size="2"><b>"This is something else for you, good luck."</b></font></center>
+<center><sub>-00:14:29</sub></center>
+ <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003210.961.jpg" height="80%" width="80%"></center>
+<center><sub>-00:32:10</sub></center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004930.361.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004959.383.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005001.049.jpg" height="80%" width="80%"></center>
+<center><font size="2"><b>"and it is exhausting. "</b></font></center>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_005006.089.jpg" height="80%" width="80%"></center>
+<center><sub>-00:49:22</sub></center>
+我想對這一集的Sophie說，真可惜你看不到Tina和Bette的對話，不然你絕對不會這樣逼Dani。
+<p>她們兩人現在的狀況就像是當初的TB，一個需要空間，一個不斷侵犯空間。但Sophie不是Tina，Dani想成為Bette，但她不是Bette。我是不太能理解為什麼Sophie看不出Dani的痛苦，看不出Dani為了應付父親和她的矛盾已經變得心力交瘁？而Sophie給予的空間結合上集和這集，合起來頂多也就是一天而已吧？這樣子逼她不是只會把她逼得離你越遠嗎？</p>
+<p>而Sophie對Bette的迷戀相信只是崇拜Bette，對御姐、偶像的那種。因為她絕對hold不住Bette，Bette就算和她真的有什麼了，感覺也不會認真想要和她一起。</p>
+<p>P.S. Dani和Tina怎麼說都在Bette家待了一整天，兩人都沒有見到面嗎？Bette家這麼大？</p>
+<br>
+<hr>
+<h3><span id="alice-nat-gigi"><span id="ML4"><b>Alice + Nat + Gigi</b></span></span></h3>
+<p>新聞爆出Bette還有跟Felicity還在交往後，上一集還在節目上傻乎乎幫Bette背書的Alice生氣Shane和Bette瞞著自己，離開Bette家後找Nat和Gigi傾訴。Alice抱怨自己也不是八卦的人啊，為什麼她們不告訴自己。Nat和Gigi交換一個默契的眼神後安慰Alice說她們只是害怕說出事實的人，然後各自輕撫她的手和臉來讓她好過點。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001650.400.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001651.928.jpg" height="80%" width="80%"></center>
+</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001652.628.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001712.268.jpg" height="80%" width="80%"></center></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001716.879.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Alice: Why didn’t she just tell me? It’s not like I’m gossipy. <sub>-00:16:49</sub></p>
+<p>(Nat and Gigi smile at each other at the same time)</p>
+<p>Alice: I’m not. That’s just my persona.</p>
+<p>Nat: She was probably just scared.</p>
+<p>Alice: Of what？</p>
+<p>Nat: You know. Sometimes, in life, we avoid the people who are gonna tell us the truth.</p>
+<p>Alice: Okay, this isn’t helping.</p>
+<p>Nat: Hey, you’re a really good friend to her.</p>
+<p>Gigi: You’re amazing, I’m sorry.</p>
+</blockquote>
+<p>Alice很享受兩人份的安撫，一切都處於和諧的狀況下。接著，侍應生走過來，說著你們這樣讓我想家了，真希望我的好友們也在L.A。Alice和Nat原本想笑著默認，結果Gigi一句話就瞬間打破了這份平靜。在侍應生恍然大悟的輕呼聲下，Alice笑容僵住，Nat立刻收回手，而Gigi則是一臉茫然。</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001725.858.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001729.684.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001730.880.jpg" height="80%" width="80%"></center></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001732.214.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001733.522.jpg" height="80%" width="80%"></center>
+</p>
+<p>侍應生識相離開後，Nat和Alice都瞪著Gigi看，Gigi還是不動自己到底做錯了什麼？</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001746.756.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001747.783.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001749.119.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001750.548.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_001751.957.jpg" height="80%" width="80%"></center>
+<br>
+<p>回家的路上，Gigi因為困惑而變得煩躁，Alice勸她冷靜一下，Nat則是覺得她是在折磨自己。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002949.084.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002951.061.jpg" height="80%" width="80%"></center>
+</p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_002953.417.jpg" height="80%" width="80%"></center>
+Gigi問她們既然不能承認關係，那麼昨晚大家一起手牽著手是什麼意思。Nat回應說那只代表我們能在黑暗中、私底下牽手。Gigi不能接受，直說這樣等於叫我回到櫃子裡一樣。Nat否認，Alice公道地說了一句基本上你的確是這個意思啦，Nat只好說那也是我們三人一起的櫃子，而且她不打算在跟孩子們坦白前向陌生人出櫃。Alice連忙說那也沒問題啊，只是我們需要一步步來，順便好好溝通；Nat卻覺得Alice站在Gigi那邊。後面Alice一邊忙著幫Gigi認清她的那句話是在隱晦幫她們出軌，一邊忙著否定Nat不打算告訴孩子這點是不可能的，已經察他們覺到事情有點奇怪。
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003003.542.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003008.215.jpg" height="80%" width="80%"></center>
+</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003013.949.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003016.748.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003028.968.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003036.097.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003038.856.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003041.767.jpg" height="80%" width="80%"></center></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003044.842.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Alice: If you honk, they’re gonna go slower! <sub>-00:29:48</sub></p>
+<p>Nat: She knows that-- <strong>she’s doing it on purpose to torture me.</strong></p>
+<p>Alice: Well, I don’t think that’s true, Nat.</p>
+<p>Gigi: Okay, one question. Last night, when we all held hands, what did that mean?</p>
+<p>Nat: It meant that we could hold hands in the dark.</p>
+<p>Alice: Okay.</p>
+<p>Gigi: No, I’m not interested in going back in the closet, thank you.</p>
+<p>Nat: Oh, my God. Nobody’s asking you to do that.</p>
+<p>Alice: Well, except that you are… technically asking her to go back in the closet… well, us.</p>
+<p>Nat: It’s a big, walk-in closet with room for three adults. I think it’s absurd to tell strangers when we haven’t told anyone else.</p>
+<p>Alice: That’s fine. I just think we need to take, you know, steps… and talk about the… you know, this.</p>
+<p>Nat: What’s going on here? Why are you taking her side?</p>
+<p>Alice: Nat.</p>
+<p>Gigi: All I said was that we weren’t friends. She had no idea what that meant.</p>
+<p>Alice: Mm. I’m pretty… I’m pretty sure she knew what that… what was going on at the… restaurant.</p>
+<p>Gigi: I don’t think so.</p>
+<p>Nat: And you know what? I made it very clear–very clear-- that I didn’t want to tell anyone until we told the kids. And by the way, we’re not telling the kids.</p>
+<p>Alice: Well, that is gonna be tough. Because…</p>
+<p>Gigi: That’s in sane. Yeah, because the kids are already asking question.</p>
+<p>Alice: Yeah, they are.</p>
+<p>Gigi: And they’re wondering why I’ve been staying at the house so much.</p>
+<p>Nat: Valid, valid question.</p>
+</blockquote>
+<br>
+<p>最後三人還是沒有辦法討論出什麼結果，只能在Gigi暴躁的開車手法中一點點前進。</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003120.625.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003122.777.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003123.631.jpg" height="80%" width="80%"></center></p>
+<center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_003126.518.jpg" height="80%" width="80%"></center>
+<center><b><font size="2">不虧是前妻，經驗豐富</font></b></center>
+<blockquote>
+<p>Alice: I think… I think we need to just breathe, okay? <sub>-00:31:12</sub></p>
+<p>Gigi: I’m breathing.</p>
+<p>Alice: And we’re gonna just get home safely. This day needs to go fuck itself.</p>
+<p>Gigi: Is that directed at my driving?</p>
+<p>Alice: No, but you do drive like you’re being chased.</p>
+<p>Nat: Yeah, that’s why I’m in the backseat.</p>
+</blockquote>
+<br>
+<p>到家後Gigi一進門就跟Nat說自己要走了，Nat立刻贊成，Alice則覺得她不應該在彼此都生氣的時候離去，應該坐下來談談。Nat說我沒有生氣啊，我只是累了；話音還沒結束Gigi就懶得再聽了，走上前親了一下Alice並跟她道晚安後小瞪了Nat一眼，摔門離去。</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004100.833.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004103.120.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004107.995.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004109.968.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004112.354.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004112.970.jpg" height="80%" width="80%"></center></p>
+<center><b><font size="2">示威</font></b></center>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004113.136.jpg" height="80%" width="80%"></center></p>
+<center><b><font size="2">"就是不親你，晚安也不跟你說，哼"</font></b></center>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004114.054.jpg" height="80%" width="80%"></center></p>
+<center><b><font size="2">"這傢伙..."</font></b></center>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004114.782.jpg" height="80%" width="80%"></center></p>
+<center><b><font size="2">"你看她"</font></b></center>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004116.311.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004117.100.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004119.699.jpg" height="80%" width="80%"></center></p>
+<center><b><font size="2">"耳朵要聾了"</font></b></center>
+<blockquote>
+<p>Gigi: Hey, I’m gonna go. <sub>-00:40:59</sub></p>
+<p>Nat: Yeah, I think that’s a good idea.</p>
+<p>Alice: Well, <strong>maybe you shouldn’t leave when we’re all angry.</strong></p>
+<p>Nat: I’m not mad. I’m just really tired.</p>
+<p>Gigi: Okay. Good night. (kiss Alice and leave)</p>
+</blockquote>
+<p>即使Alice也有反對Gigi突然把她們三人出櫃，但Gigi並沒有對Alice生氣。不知道是因為Gigi和Nat的歷史比較長久，兩人對彼此的情緒會比較強烈，而且Alice還是比較願意溝通的那一方；還是因為Gigi跟Alice感情還沒那麼深。</p>
+<br>
+<p>Gigi離開後Nat看著Alice的表情就知道她有話要講，Alice表示只是覺得她對Gigi有些苛刻，Nat又在說Alice就是站在Gigi那邊跟她一起對抗自己；Alice立刻表明自己不會參與這種選邊站的遊戲。兩人說著走回房，打開燈的瞬間看見床上放著三張卡片，Nat、Gigi和Alice都各自有一張。雖然M.Alice（我比較傾向Miss. Alice）感覺很像是暗示Malice（惡意），但是Alice完全不介意，反倒安慰Nat說孩子們都接受得蠻不錯的。</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004122.187.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004126.341.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004127.145.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004129.399.jpg" height="80%" width="80%"></center></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004156.743.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Nat: What? What are you gonna say to me right now? <sub>-00:41:23</sub></p>
+<p>Alice: I think you’re being a little hard on her.</p>
+<p>Nat: Why does everyone take her side?</p>
+<p>Alice: Whoa. I am not doing that.</p>
+<p>Nat: She outed us to a stranger before we even told our children.</p>
+<p>Alice: I know, but…</p>
+<p>Nat: I can’t believe I have to fight both of you on this. It’s un-fucking-real. (see the cards) What the hell are these?</p>
+<p>Alice: The kids wrote us all notes. That’s… for Gigi. (read the card) “I love making breakfast with you.”. That’s really sweet.</p>
+<p>Nat: (read her own card) “I love when you read us stories.”</p>
+<p>Alice: Aw. (see the card which with her name on it.) “M.Alice”. (read the card) “I’m glad you fill up the swear jar.”. They called me M.Alice.</p>
+<p>Nat: Malice.</p>
+<p>Alice: Well, the “M” is for “mom”. so it’s “mom Alice.” Malice…(realized something) Oh. Yeah, I see.</p>
+<p>Nat: Right.</p>
+<p>Alice: Well, that’s okay. You know, I’ll take it. See? They’re fine.</p>
+<p>Nat: Yeah, I can see that.</p>
+<p>Alice: And that’s good,right? I mean, that’s what you’ve been worried about this whole time. They seem to be okay.</p>
+</blockquote>
+<p>其他兩張卡片看不到署名，而Alice這張只有Olive的署名，這名字的惡作劇大概是姐姐想出來的，她應該真的挺討厭Alice的。這也難怪，一來Alice很容易被誤會成插手他們家庭的兇手；二來Alice跟小孩子真的不太處得來。但能夠找到像Alice這樣的人並不是這麼簡單的。</p>
+<br>
+<p>Nat跟Alice坦白自己不是針對Gig，只是有點不知所措；她不想傷害Alice，可是她的確對Gigi有愛恨分不清的感覺讓她覺得很混亂，唯一能夠肯定是她很愛Alice。Alice表示她有看到Nat的糾結，但她理解並相信Nat對Gigi的感覺不會影響到她們之間的感情，最後還讓Nat打電話給Gigi邀請她回來。</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004234.033.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004238.349.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004243.690.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004246.938.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004251.250.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004308.783.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004321.968.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004324.881.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004329.504.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004341.110.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004344.046.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004345.588.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004348.710.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004353.089.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004354.479.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004404.077.jpg" height="80%" width="80%"></center></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004406.324.jpg" height="80%" width="80%"></center>
+</p>
+<p>最後和好的三人抱著兩個小孩一起入睡。</p>
+<p>    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004724.829.jpg" height="80%" width="80%"></center></p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e06.720p.webrip.x264-tbs[eztv].mkv_004734.802.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Nat: I think I just… I feel a little like… I don’t want… I don’t want to be mean to anyone or to her. I just… feeling a little overwhelmed. <sub>-00:42:26</sub></p>
+<p>Alice: Okay.</p>
+<p>Nat: It’s so confusing, you know? I don’t want to hurt you, but then I… I have all these feelings, you know, for… for…</p>
+<p>Alice: For…for Gigi.</p>
+<p>Nat: But like, all the feelings, you know? Like, all the bad stuff and the good stuff. Just, like…</p>
+<p>Alice: Yeah, I can see that.</p>
+<p>Nat: I love you. I love you so much. I’m not confused about that.</p>
+<p>Alice: I know that. I’m okay.</p>
+<p>Nat: You are?</p>
+<p>Alice: Yeah. I mean, I’ve always been an open person. You know that. And… I think you and I are in a really good place, so–</p>
+<p>Nat: Yeah. I do, too.</p>
+<p>Alice: I know this is tricky, but… <strong>I trust you.</strong></p>
+<p>Nat: <strong>I don’t want to lose you.</strong></p>
+<p>Alice: <strong>I’m not going anywhere. I’m totally in this.</strong></p>
+<p>Nat: Why are you the best?</p>
+<p>Alice: I was born this way.</p>
+<p>Nat: Oh, yeah? Oh, great.</p>
+<p>(both laugh)</p>
+<p>Alice: Do you think you should call her and invite her back?</p>
+<p>Nat: Yeah. I’ll call her.</p>
+</blockquote>
+<p>說實在的，個人覺得這三人怎麼配都覺得不錯；一人不開心還有兩個人一起哄，這個畫面也很有愛。而這一集中Alice完全是擔任Nat和Gigi兩人之間的調和劑，如果沒有了Alice，她們感覺就算復合了也會再度分開，所以希望編劇千萬、千萬不要讓Alice又孤身一人，給三人行一個可行的機會啊！</p>
+<br>
+<hr>
+<center><b><font size="5">最後，Tina出場後就續訂第二季了！撒花！鼓掌！！</font></b></center></span>
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/01/11/TagsProblem/">
+        下一篇<br>無法讀取標籤分類
+    </a>
+    
+</nav>
+
+    
+            
+
+<div class="post-comment-wrapper">
+    <div id="disqus_thread"></div>
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?86831283"></script>
+
+
+<script>
+    var disqus_shortname = 'kayejas';
+    var disqus_config = function () {
+        this.page.url = 'https://jaskaye.github.io/2020/01/14/TLWQ0106/';
+        this.page.identifier = '/2020/01/14/TLWQ0106/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.body || d.head).appendChild(s);
+    })();
+</script>
+
+
+</body>
+</html>

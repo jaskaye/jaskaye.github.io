@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>What did you expect? - Jas</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Jasmine">
+<meta name="description" content="The L word Generation Q 第7集觀後筆記">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?12858699">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://jaskaye.github.io">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                標籤
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/categories/index.html">
+                分類
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Jas
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Jas</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Jas’s
+        </div>
+        <div class="nav-subtitle">
+            記
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            標籤
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/categories/index.html">
+            分類
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('/2020/01/24/TLWQ0107/the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003929.771.jpg')">
+                <div class="post-title">
+                    What did you expect?
+                    <div class="post-meta">
+                        <time datetime="2020-01-24T02:00:43.000Z" itemprop="datePublished">
+                            2020-01-24 13:00
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/觀影-讀後筆記/'>觀影/讀後筆記</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/The-L-word/'>The L word</a>, 
+                        
+                        <a href='/tags/Lesbian/'>Lesbian</a>, 
+                        
+                        <a href='/tags/TV-Series/'>TV Series</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><a href="#ML1"><center><b>Alice + Nat + Gigi</b></center></a></p>
+<p><a href="#ML2"><center><b>Tina &amp; Bette</b></center></a></p>
+<p><a href="#ML3"><center><b>Dani &amp; Sophie &amp; Finley</b></center></a></p>
+
+<body oncontextmenu="return false" onselectstart="return false">
+<hr>
+<h3><span id="alice-nat-gigi"><span id="ML1"><b>Alice + Nat + Gigi</b></span></span></h3>
+<center>這集的三人行只想套用有經驗的Shane的一句話 ↓</center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003824.031.jpg" height="80%" width="80%"></center>
+</p>
+<p>我以為<a href="#https://jaskaye.github.io/2020/01/14/TLWQ0106/#ML4_2">上一集的Alice</a>真的這麼大方啊！居然完全讚同Nat跟Gigi復合，高人啊！但原來並沒有，發現Nat和Gigi獨自親熱後Alice就整個大發飆了。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003723.305.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003724.409.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">ex-wifes一臉懵然，所以你是什麼意思？</font></b></center>
+雖然Alice前後都有明示不論什麼時候都要三人一起才能行動，但這很難做到吧？兩人情侶都未必能時時刻刻找到獨處的時間了，何況是有著兩個小孩的三人行。
+<blockquote>
+<p>Alice: What’s going on? <sub>-00:36:48</sub></p>
+<p>Nat: Alice, what? You told me you were okay with this, right? That you were open…</p>
+<p>Alice: Yeah, no, right. I’m totally open.</p>
+<p>Nat: You’re mad?</p>
+<p>Alice: No, I’m not mad. I don’t… I don’t tink this is what I ment.</p>
+<p>Nat: Okay.</p>
+<p>Gigi: Should you two talk alone?</p>
+<p>Nat: No. No, we should all talk about it. Right?</p>
+<p>Alice: Yeah, no. You should-- you should stay, Gigi. It’s your house. It’s fucking your-- it’s your wife. It’s your whole fucking life.</p>
+</blockquote>
+<br>
+<p>根據Nat和Gigi親熱之前的談話，感覺Nat真的有點情緒掙扎。怪責著Gigi出軌導致彼此浪費了時間，繞了一大圈，受了一堆折磨；讓她遇上了Alice後又還是捨不得彼此，最終又想要復合又怕傷害到Alice。而Gigi則是有種“既然經歷了就經歷了，即使是兜兜轉轉也得到學習到錯誤，結果仍然是好的就沒關係”的坦然。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002538.990.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002539.079.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002550.881.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002554.794.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002624.093.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002630.631.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002703.205.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002807.466.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">驗證了第五集筆記中當Nat發飆時Gigi會抱著她來安慰的想法</font></b></center>
+<blockquote>
+<p>Nat: I wish we hadn’t put the kids through all of this. <sub>-00:25:27</sub></p>
+<p>Gigi: They’re doing great, love.</p>
+<p>Nat: You shouldn’t have left.</p>
+<p>Gigi: You didn’t really give me the chance to stay.</p>
+<p>Nat: I wanted you to stay.</p>
+<p>Gigi: Really? Because the second you found out, your wrote me off. Wouldn’t even hear me out.</p>
+<p>Nat: Well, you fucked up.</p>
+<p>Gigi: I know. But…</p>
+<p>Nat: But what?</p>
+<p>Gigi: But you didn’t even gice me the chance to make it up to you.</p>
+<p>Nat: I don’t know how.</p>
+<p>Gigi: I know.</p>
+<p>Nat: I wish I did. I wish I had let you apologize. I wish I had worked harder to forgive you back then.</p>
+<p>Gigi: It’s okay.</p>
+<p>Nat: No. We didn’t have to go through all of this.</p>
+<p>Gigi: I’m here. I’m here now.</p>
+</blockquote>
+<br>
+<p>結尾把話談開的Nat和Gigi有嘗試挽回Alice，但Alice覺得她們復合就好，不用找自己這個多餘之人。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004902.136.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004905.955.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004907.059.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004909.901.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004911.695.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">Nat & Gigi: "er..."</font></b></center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004912.987.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Gigi: We’re better now. <sub>-00:48:24</sub></p>
+<p>Nat: Yeah, we’re better.</p>
+<p>Alice: Better?</p>
+<p>Nat: And now, you know. We can be better together, and for you. And I, you know, I think we can make this work.</p>
+<p>Alice: Wow.</p>
+<p>Nat: Wow, as in yay, or… what is the wow?</p>
+<p>Alice: Wow, as in, I’m so glad I could be there to help push you guys towards hasing out your divorce and get you to a really really good place.</p>
+<p>Nat: No, that’s…That’s not what we’re saying.</p>
+<p>Gigi: What we’re saying is, we want you to come hone, so we can work on this.</p>
+<p>Alice: Home? <strong>Have you been there the whole time I’ve been at Shane’s?(to Nat) Have you let her stay there?</strong></p>
+<p>(Nat and Gigi slienced.)</p>
+<p>Alice: Holy fuck!</p>
+</blockquote>
+<p>這段跟TLW裡當Bette在出軌後勸Tina回家，Tina質問她是不是昨晚還跟那個女人在搞時的情況一模一樣啊！（莫名覺得好笑）。三人行似乎就這樣結束了，挺喜歡Nat和Gigi的我私心希望她們還會繼續出場，不管是三人行還是兩人行。</p>
+<hr>
+<h3><span id="tina-amp-bette"><span id="ML2"><b>Tina &amp; Bette</b></span></span></h3>
+<p>上集留了下來的Tina邀請Bette兩人晚餐，Bette心裡有些期望地下了廚，結果卻引來了Tina將要和別人結婚的消息，想要掩蓋自己被打擊到的慌張情緒卻枉然。看著她拿起酒瓶又放下，拿起酒杯又放下，說著恭喜的話陪著奇怪的高漲情緒，熟悉她的Tina知道她的反應很奇怪，卻不知道該如何安慰她。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002135.743.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002137.173.jpg" height="80%" width="80%"></center>
+</p>
+<center><sub>-00:21:34</sub></center>
+<p>面對著Bette的恭喜，Tina一開始開心接受，但當Bette逃去拿酒的後Tina就皺起了眉，似乎感覺到Bette的反應不太對勁。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002201.821.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002204.069.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002206.599.jpg" height="80%" width="80%"></center>
+</p>
+<center>Tina提出到Carrie時停頓了一下，像是在確認Bette能不能承受得住。</center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002229.405.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002231.119.jpg" height="80%" width="80%"></center>
+</p>
+<p>Bette露出僵硬的笑容，答應Tina跟Carrie一起告訴Angie這個消息。Tina看著她，沒有一點笑容，反而用眼神詢問她是否還好，但Bette轉移了視線，逃離了她的關心。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002248.439.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002250.678.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002254.010.jpg" height="80%" width="80%"></center>
+</p>
+<p>最後，Bette提出要開香檳慶祝，Tina連連搖頭卻找不到機會開口拒絕。兩人背對著彼此的瞬間都表現出真正的情緒，Bette抱著頭、雙手不知所措地亂摸，最後撐在桌邊，滿滿的都是懊悔的味道。而Tina也是小表情多多，困擾和擔心的情緒表露无遗，同樣不知道該如何反應才好。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002259.060.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002311.472.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002312.390.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002313.182.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002313.600.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002314.642.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002315.766.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002316.562.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002318.439.jpg" height="80%" width="80%"></center>
+</p>
+<p>這兩人的對手戲真的看得很爽。看得出Tina仍然很關心Bette的情緒，雖然不知道是出於習慣還是來自剩下的絲毫愛意。期待Carrie的出現！希望是個能夠讓Tina開心、放鬆的角色。</p>
+<hr>
+<h3><span id="dani-amp-sophie-amp-finley"><span id="ML3"><b>Dani &amp; Sophie &amp; Finley</b></span></span></h3>
+<p>想不到這三人居然會混在一起，一直以為Dani和Finley只會是戀人未滿，所以兩人真的接吻時，那個驚訝程度不亞於當年Alice和Dana的初吻。而我真的搞不懂Sophie，她說要溝通，然而當Dani提出要陪她去醫院時，她說不用；後面又暗自怪責Dani居然真的不出現。我當下就覺得&quot;Hello?不是你叫人家不要來嗎？即使是Finley都知道你想要人家來就開口說啊&quot;。雖然明白Sophie可能是希望Dani能夠放下工作，以自己為先，但這種溝通方式真的遲早玩完。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_000535.454.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_000537.186.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002907.556.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002911.338.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002913.537.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_002923.025.jpg" height="80%" width="80%"></center>
+</p>
+<center>其後Finley幫Sophie收拾衣服時遇上Dani，問她要不要一起去醫院，Dani皺著眉，遲疑了一下才答應。</center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003502.512.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003504.764.jpg" height="80%" width="80%"></center>
+</p>
+<p>Finley提醒她應該要去醫院陪Sophie，Dani有點覺得不可思議地回說是Sophie叫自己不要去的，而且自己很忙啦，又不像你。被冒犯到的Finley沒有生氣回嘴，只是默默說了一句：對啊，你跟我不一樣，我又不是她的未婚妻。Dani當場愣住，終於想起了自己的責任。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003603.415.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_003604.940.jpg" height="80%" width="80%"></center>
+</p>
+<center>隨後即使到了醫院也是一臉不情願的，而且待了沒幾分鐘就跑了。</center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004204.997.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004207.230.jpg" height="80%" width="80%"></center>
+</p>
+<center>跟Bette討論時的眼神，還有看著Bette背影的笑容；跟與Sophie這幾集相處的相比簡直是天地之差。</center>
+<p>
+    <center><img src="the.l.word.generation.q.s01e07.proper.720p.webrip.x264-tbs[eztv].mkv_004429.625.jpg" height="80%" width="80%"></center>
+</p>
+<br>
+<p>這兩集基本上是預告Dani和Sophie的搭配失敗，Sophie將與Finley組新CP。先不論感覺對不對，以需要的角度來看，Sophie和Finley的確挺適合搭配。Sophie需要一個沒什麼複雜想法、簡單的人；Finley需要一個溫暖的人和家庭。像是之前牧師姐姐說的，需要一個跟自己平等的人。不是說一定要經濟、家庭平等，但一定要三觀想法是平等的。Sophie和Dani現在都只有一顆蠢蠢欲動想要換人的心，還是快點斷了吧，免得拖拖拉拉難受。</p>
+</body>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/01/18/MovWord/">
+        下一篇<br>Quote
+    </a>
+    
+</nav>
+
+    
+            
+
+<div class="post-comment-wrapper">
+    <div id="disqus_thread"></div>
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?48277945"></script>
+
+
+<script>
+    var disqus_shortname = 'kayejas';
+    var disqus_config = function () {
+        this.page.url = 'https://jaskaye.github.io/2020/01/24/TLWQ0107/';
+        this.page.identifier = '/2020/01/24/TLWQ0107/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.body || d.head).appendChild(s);
+    })();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Just you - Jas</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Jasmine">
+<meta name="description" content="The L word Generation Q 第8集觀後筆記">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?87009645">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://jaskaye.github.io">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                標籤
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/categories/index.html">
+                分類
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Jas
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Jas</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Jas’s
+        </div>
+        <div class="nav-subtitle">
+            變成語言的想法
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            標籤
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/categories/index.html">
+            分類
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('/2020/02/09/TLWQ0108/the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_141059.562.jpg')">
+                <div class="post-title">
+                    Just you
+                    <div class="post-meta">
+                        <time datetime="2020-02-09T11:26:49.000Z" itemprop="datePublished">
+                            2020-02-09 22:26
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/觀影-讀後筆記/'>觀影/讀後筆記</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/The-L-word/'>The L word</a>, 
+                        
+                        <a href='/tags/Lesbian/'>Lesbian</a>, 
+                        
+                        <a href='/tags/TV-Series/'>TV Series</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><a href="#ML1"><center><b>Dani</b></center></a></p>
+<p><a href="#ML2"><center><b>Shane &amp; Quiara</b></center></a></p>
+<p><a href="#ML3"><center><b>Bette &amp; Angie</b></center></a></p>
+<p><a href="#ML4"><center><b>Alice &amp; Nat</b></center></a></p>
+<p><a href="#ML5"><center><b>Bonus</b></center></a></p>
+
+<body oncontextmenu="return false" onselectstart="return false">
+<p>第一季的最後一集遲遲沒有寫下筆記，一來因為忙碌，二來這集基本上沒有拋下什麼大炸彈，只是收了一些線又埋了一些線。因為已經宣佈了第二季，更不會提心吊膽地猜測接下來會怎樣，老實等待就可以了。</p>
+<hr>
+<h3><span id="dani"><span id="ML1"><b>Dani</b></span></span></h3>
+<blockquote>
+<p>Rodolfo: I taught you to have ambition and pride. Her family is… <sub>-00:23:41</sub></p>
+<p>Dani: Is loving and kind and supportive.</p>
+<p>Rodolfo: I don’t want you to take a step backward.</p>
+<p>Dani: I’m not.</p>
+<p>Rodolfo: Listen, when you are… when you come from a broken family like Sophie, that’s the only way you know to live.</p>
+<p>Dani: She’s not from a broken family.</p>
+<p>Rodolfo: She doesn’t know stability, and I’m afraid that when things get hard, <strong>she’s gonna leave you, because that-that’s what she knows.</strong></p>
+<p>Dani: Dad, <strong>she’s so much better than that. She’s not gonna leave me.</strong> We love each other, and we’re good together. I need you to be okay with that.</p>
+<p>Rodolfo: Okay.</p>
+</blockquote>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142431.504.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142446.769.jpg" height="80%" width="80%"></center>
+</p>
+<p>Dani自己也明白她把熱情奉獻給工作而冷落了Sophie，雖然她也盡力把剩下的關注全給予Sophie，只是對Sophie來說那還是不夠。不難理解Sophie的心情，可是看到這段Dani不斷為她掛保證的時候，真的很難不同情Dani。第二季中Dani肯定會受到傷害，畢竟不管Sophie離不離開她都不會讓她多好過。</p>
+<p>個人猜測最後Sophie會去追Finely，陪她解決家庭問題，回去跟Dani解釋一番又糾纏一段時間才能說清並分開。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_152855.043.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_152903.860.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_152920.811.jpg" height="80%" width="80%"></center>
+</p>
+<p>也許還會有一幕Dani會對父親發脾氣說：&quot;你開心了嗎？都被你猜中了，她真的離開我了&quot;之類的。被人看低自己的感情，結果還真的被對方說中的滋味超級難受！</p>
+<hr>
+<h3><span id="shane-amp-quiara"><span id="ML2"><b>Shane &amp; Quiara</b></span></span></h3>
+<blockquote>
+<p>Quiara: I’m still gonna have a baby, Shane. I’m gonna try again as soon as I’m ready. <sub>-00:26:01</sub></p>
+<p>Shane: Yeah…um…yeah.</p>
+<p>Quiara: I fucking knew it.</p>
+<p>Shane: You knew what?</p>
+<p>Quiara: You were relieved. I lost a baby, and you were relieved.</p>
+<p>Shane: No, no, no, no. <strong>I was relieved that you were okay.</strong></p>
+<p>Quiara: That’s bullshit.</p>
+<p>Shane: What?</p>
+<p>Quiara: You win. You get whatever you want.</p>
+<p>Shane: Hold on a second. That’s not fair.</p>
+<p>Quiara: None of this is fucking fair, Shane.</p>
+<p>Shane: Hey, listen, <strong>you knew I didn’t want this</strong>, but you showed up pregnant anyway. So what was I supposed to do?</p>
+<p>Quiara: You could have been honest  from the beginning.</p>
+<p>Shane: <strong>I was honest with you.</strong></p>
+<p>Quiara: Well, then why did you agree to this?</p>
+<p>Shane: <strong>Because I love you.</strong> And I agreed to do this so I could be with you.</p>
+<p>Quiara: Do you want to be with me now?</p>
+<p>Shane: Yeah.</p>
+<p>Quiara: So you’re saying you would like to try again, too?</p>
+<p>Shane: I’m-I’m saying… that,uh… I want to be realistic and to… and to plan.</p>
+<p>Quiara: That’s-that’s what I thought.</p>
+<p>Shane: What?</p>
+<p>Quiara: <strong>No one is ever going to love you because you’re incapable of loving anyone but your fucking self.</strong> (walked away but turned back and holding a ring) Remember this? I never got rid of it.</p>
+</blockquote>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142521.816.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142544.312.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142707.167.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142809.726.jpg" height="80%" width="80%"></center>
+</p>
+<p>因為緊張Quiere的身體，一向不怎麼發飆的Shane也忍不住兇醫務人員；因為愛Quiere，所以即使對養育孩子感到十分恐懼也還是聽從Tess的建議，不斷去嘗試溝通。Quiere這番話相信只是氣急之言，但真的對Shane不公平，只是沒有人會忍心在這種時候指責剛失去孩子的她，可是…Shane真的真的真的何其無辜。</p>
+<blockquote>
+<p>Carmen: It is the practice of having a single mate during a period of time. Does that… mean anything to you?  <sub>-Season 3, ep06</sub></p>
+<p>Shane: I’m willing to try. Is that not enough? <strong>I’m willing to try something that doesn’t come naturally to me, and that I don’t understand but am willing to try.</strong></p>
+<p>Carmen: Right. Birds, Shane, I’m talking about a god-damn-fucking bird. Asking you to be as civilized as a god-damn-fucking bird.</p>
+</blockquote>
+<p>TLW時期的Shane說一句Sorry像是要她的命，即使愛著Carmen也是心不甘情不願地說雖然不理解單一伴侶的意義但會願意嘗試，而在TLWQ時期的她起碼懂得了如何好好對待伴侶，也明白了維持婚姻的原因，並且努力走到了養育孩子的階段。在這集的最後她撿回了流浪狗估計也是想要鍛煉自己的責任感。</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_152834.651.jpg" height="80%" width="80%"></center>
+</p>
+<p>跳tone一下引用GLOD裡面女王所說的話：</p>
+<p>
+    <center><img src="mp4_002736.537.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="mp4_002740.651.jpg" height="80%" width="80%"></center>
+</p>
+<hr>
+<h3><span id="bette-amp-angie"><span id="ML3"><b>Bette &amp; Angie</b></span></span></h3>
+<blockquote>
+<p>Bette: Are you sad about ther getting married? <sub>-00:45:48</sub></p>
+<p>Angie: Yeah. I guess a tiny part of me always hoped that… you two would get back together. I know it sounds stupid, but I did…</p>
+<p>Bette: No, no, no, no, it’s not… <strong>It’s not stupid.</strong> I’m really sorry that…that you saw me like that.</p>
+<p>Angie: It’s okay. You never let yourself be sad.</p>
+<p>Bette: What do you mean?</p>
+<p>Angie: Well, Mom left and then Aunt Kit died, and…I see you. You just…</p>
+<p>Bette: What?</p>
+<p>Angie: You just kept going.</p>
+<p>Bette: I think that I felt that if I…<strong>if I truly let myself grieve, then that would mean… saying a final goodbye, and I wasn’t ready to do that. I guess I just try to outrun my feelings.</strong></p>
+</blockquote>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142936.157.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_143025.389.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">"你這怎麼算是蠢話呢？我也想復合的啊"</font></b></center>
+<hr>
+<h3><span id="alice-amp-nat"><span id="ML4"><b>Alice &amp; Nat</b></span></span></h3>
+<blockquote>
+<p>Alice: I thought I was this cool, open, you know, understanding queer lady who wanted to live outside of every box, and…I’m not. I-I’m just, uh…<strong>I’m heartbroken.</strong> <sub>-00:53:21</sub></p>
+<p>Roxane Gay: Yeah, that’s understandable.</p>
+<p>Alice: Because I just want Nat. You know, just Nat.</p>
+<p>Nat: I’m here.</p>
+<p>(The audience burst into an uproar.)</p>
+<p>Alice: What?</p>
+<p>Nat: Hi.</p>
+<p>Alice: What’s happening?</p>
+<p>Nat: Sorry. Um, I’m here. It’s me.</p>
+<p>Alice: Can we cut?</p>
+<p>(Sophie told the camera men to keep rolling.)</p>
+<p>Nat: I was gonna wait for you in your office, but then I heard what you were saying, and I just…</p>
+<p>Alice: I-I’m in the middle of a show.</p>
+<p>Nat: Sorry. Um, can I… Can I go up there?</p>
+<p>Alice: No.</p>
+<p>(Sophie told Nat to go up)</p>
+<p>Alice: What’s happening?</p>
+<p>(Nat got down on one knee, people cheering)</p>
+<p>Nat: No. No, I’m not proposing. I’m just trying to get closer to her.</p>
+<p>Alice: Yeah, I don’t do marriage.</p>
+<p>Nat: Okay. I want you, too. I lost a marriage because I was afraid to fight for what I wanted, and I’m not gonna make the same mistake twice. I love you. I am in love with you. And <strong>I feel like my complete and total self when I’m with you.</strong> And you make me laugh, even when I’m mad, which is so fucking annoying. But it makes me love you even more. And your maternal instincts are a little off, but…</p>
+<p>Alice: Well,I’m-I’m…</p>
+<p>Nat: Well, I know. And you wake up every morning and you burn the shit out of their eggs, and I love that.</p>
+<p>Alice: They’re deceivingly hard to make.</p>
+<p>Nat: Not really. They’re very easy. <strong>Love, you tried to make it work with my ex-wife because you thought it would make me happy.</strong></p>
+<p>Alice: I did. I really did that.</p>
+<p>Nat: Yeah, I know. (to Roxena) I mean, she’s the fucking best.</p>
+<p>Alice: (to Roxena) I’m pretty great.</p>
+<p>Nat: Yeah, you are. I love you. I’m gonna fight for you. Okay?</p>
+<p>Alice: <strong>Just me?</strong></p>
+<p>Nat: <strong>Yes. Just you.</strong></p>
+</blockquote>
+<p>
+    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_143232.035.jpg" height="80%" width="80%"></center>
+</p>
+<p>    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_143312.194.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_152652.917.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_152657.612.jpg" height="80%" width="80%"></center></p>
+Nat這樣的登場真的很讓人驚喜，在節目上告白更是勇敢。這麼多集以來都在擔心Alice會不會最後變得一無所有，幸好最後還是被Nat挽回了。雖然有點可惜三人行就這樣結束了，但說不定第二季還有戲？畢竟Gigi還是兩個孩子的媽媽，不至於完全不出場吧？總之她們三人怎樣配都覺得OK！
+<center>（下跪那段挺好笑的，編劇："不是所有下跪都是要求婚啊！"）</center>
+<hr>
+<h3><span id="bonus"><span id="ML5"><b>Bonus</b></span></span></h3>
+<blockquote>
+<p>Alice: You’re handling this all really well. <sub>-00:19:36</sub></p>
+<p>Bette: Well, we went out swinging. I gave everything I had to the campaign and <strong>I found a way to be myself. What more could anyone ask for?</strong></p>
+</blockquote>
+<p>    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142334.689.jpg" height="80%" width="80%"></center></p>
+<br>
+<blockquote>
+<p>Rebecca: It’ not a cut-and-dry thing. <strong>It is a lifelong journey</strong>… of cultivating… self-worth, self-love. <sub>-00:39:51</sub></p>
+<p>Finely: Love? I don’t even like myself right now, like, at all. I need… I need some help here.</p>
+<p>Rebecca: Okay. It feels really good sometimes to take responsibility for the mistakes that you’ve made. <strong>Just little things. Just start small. little baby steps.</strong></p>
+</blockquote>
+<p>    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_142847.990.jpg" height="80%" width="80%"></center></p>
+<center>Yeah！！牧師小姐姐又出場了！希望第二季還會出現！</center>
+<br>
+<p>總覺得第一季想要表達的一個小主題是：你可以影響你的伴侶，但你沒有辦法去改變你的伴侶；能夠改變的只有自身。如果兩人怎樣都無法磨合的話，也許不是誰的錯，只是你們不適合。</p>
+<p>最後，例牌地期待一下第二季。對我個人來說，比較好奇Quiere拋下的戒指有什麼故事、Alice跟Nat會不會再牽扯到Gigi，還有Carrie到底會是怎樣的人、和Tina有什麼故事。</p>
+<p>至於新世代的幾位…再看多幾季培養感情吧。</p>
+<br>
+<p>    <center><img src="the.l.word.generation.q.s01e08.720p.webrip.x264-xlf[eztv].mkv_20200209_143104.987.jpg" height="80%" width="80%"></center></p>
+<center><b><font size="2"><s>Finley沒那麼瘋癲的話還挺想follow的...</s></font></b></center>
+</body>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/01/24/TLWQ0107/">
+        下一篇<br>What did you expect?
+    </a>
+    
+</nav>
+
+    
+            
+
+<div class="post-comment-wrapper">
+    <div id="disqus_thread"></div>
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?3037999"></script>
+
+
+<script>
+    var disqus_shortname = 'kayejas';
+    var disqus_config = function () {
+        this.page.url = 'https://jaskaye.github.io/2020/02/09/TLWQ0108/';
+        this.page.identifier = '/2020/02/09/TLWQ0108/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.body || d.head).appendChild(s);
+    })();
+</script>
+
+
+</body>
+</html>

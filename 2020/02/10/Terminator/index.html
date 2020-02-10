@@ -1,0 +1,980 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Grace and Dani - Jas</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Jasmine">
+<meta name="description" content="Terminator Dark Fate / 魔鬼終結者 黑暗宿命">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?72976776">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://jaskaye.github.io">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                標籤
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/categories/index.html">
+                分類
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Jas
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Jas</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Jas’s
+        </div>
+        <div class="nav-subtitle">
+            變成語言的想法
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            標籤
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/categories/index.html">
+            分類
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('/2020/02/10/Terminator/Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165934.916.jpg')">
+                <div class="post-title">
+                    Grace and Dani
+                    <div class="post-meta">
+                        <time datetime="2020-02-10T06:30:13.000Z" itemprop="datePublished">
+                            2020-02-10 17:30
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/觀影-讀後筆記/'>觀影/讀後筆記</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/Moives/'>Moives</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><a href="#ML1"><center><b>初見</b></center></a></p>
+<p><a href="#ML2"><center><b>Grace對Dani的保護慾</b></center></a></p>
+<p><a href="#ML3"><center><b>Dani的成長</b></center></a></p>
+<p><a href="#ML4"><center><b>Bonus</b></center></a></p>
+<p><a href="#ML4_1"><center>I’m human. Just enhanced.</center></a></p>
+<p><a href="#ML4_2"><center>You are the future.</center></a></p>
+<p><a href="#ML4_3"><center>I’m not running.</center></a></p>
+<p><a href="#ML4_4"><center>Let me save you.</center></a></p>
+<p><a href="#ML4_5"><center>妳看我，我看妳</center></a></p>
+<p><a href="#ML4_6"><center>牽手手</center></a></p>
+<p><a href="#ML4_7"><center>不管怎樣就是要抱抱</center></a></p>
+<hr>
+<h3><span id="初見"><span id="ML1"><b>初見</b></span></span></h3>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001645.313.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Diego: Hey, lady! <sub>-00:16:24</sub></p>
+<p>Grace: Grace. <strong>My name is Grace.</strong></p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175040.320.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175104.768.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Sarah: So who are you? <sub>-00:31:38</sub></p>
+<p>Dani: Um, Daniella Ramos. Dani. <strong>I’m nobody.</strong></p>
+<p>Sarah: Well, Dani, <strong>you must be somebody</strong>, or they wouldn’t have sent who ever she is to protect you.</p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190622.987.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190626.003.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Dani: What’s your name? <sub>-01:30:44</sub></p>
+<p>Grace: Grace.</p>
+<p>Dani: Grace. <strong>I’m Daniella. Dani.</strong></p>
+</blockquote>
+<br>
+<hr>
+<h3><span id="grace對dani的保護慾"><span id="ML2"><b>Grace對Dani的保護慾</b></span></span></h3>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_164344.528.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Grace: I know you’re scared, but I’m here to protect you. <sub>-00:18:22</sub></p>
+<p>Dani: Why us?</p>
+<p>Grace: You, Dani. <strong>You’re my mission.</strong></p>
+</blockquote>
+<center>Grace強調自己的任務只有Dani一人。</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_164929.219.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Grace: Drive. <sub>-00:20:15</sub></p>
+<p>Dani: What?</p>
+<p>Grace: Can you drive?</p>
+<p>Dani: No! I mean, I can’t…</p>
+<p>Diego: I can! I can!</p>
+<p>Dani: Hold on! Grace…</p>
+<p>Grace: Dani, <strong>put your seat belt on.</strong></p>
+</blockquote>
+<center>上一秒因為情況緊急而用了命令口氣，下一秒見Dani驚慌的臉色立刻放軟語氣</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165654.838.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Grace: When they start to kill me, <strong>run.</strong> <sub>-00:24:24</sub></p>
+<p>Dani: What?</p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175415.109.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175545.773.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175553.164.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175749.411.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Grace: <strong>I need to protect your commander .</strong> <sub>-00:37:07</sub></p>
+<p>Medic: The commander is safe, thanks to you. Don’t worry, solider. You’ll make it.</p>
+<p>Grace: I volunteer. Make me an Augment.</p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_180302.512.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_180426.575.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Sarah: Interview’s over. We gotta move. <sub>-00:40:40</sub></p>
+<p>Grace: We? There is no “we”. <strong>Dani’s with me. It’s my mission to protect her.</strong></p>
+</blockquote>
+<center>Grace不信任由其他人保護Dani，堅持自己和Dani兩人一隊。</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_180912.764.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Grace: Let’s get something straight. <strong>If you put her in danger, or you get in my way, I will fuck you up.</strong> <sub>-00:41:38</sub></p>
+<p>Sarah: Right, I drive.</p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183252.907.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183304.987.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183412.362.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">"雖然很不爽，但她說得對"</font></b></center>
+<blockquote>
+<p>Grace: Dani, you need to understand something, you can’t do stupid shit like that. You cannot put yourself at risk. <sub>-00:01:05:08</sub></p>
+<p>Dani: He would have killed Sarah.</p>
+<p>Grace: That doesn’t matter! When are you gonna get it? <strong>Everybody dies if you don’t make it.</strong></p>
+<p>Sarah: She’s right.</p>
+<p>Dani: What?</p>
+</blockquote>
+<center>一向對Dani好聲好氣的Grace只有在前者不把自己的生命當作一回事的時候，才會發脾氣。</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_181222.961.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Grace: I don’t know how I made it through the next few years. I just try not to think about it. But I got lucky. <strong>Someone found me, saved me, and then we started fighting back.</strong> <sub>-00:49:42</sub></p>
+<p>Sarah: And let me guess. Dani gives birth to the one men that can stop it.</p>
+<p>Dani: What?</p>
+<p>Sarah: The future wants you dead for the same reason it wanted me dead.</p>
+<p>Dani: But I’m nothing. I’m nobody.</p>
+<p>Sarah: Yeah, you are not the threat. It’s your womb. Fine, let someone else be Mother Mary for a while.</p>
+<p>Grace: <strong>If you are Mother Mary, why do I wanna beat the shit outta you?</strong></p>
+</blockquote>
+<center>Grace討厭Sarah無意中把Dani的價值貶低得只有子宮，氣得想打她又不能打，只好生悶氣。</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182209.770.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Dani: Okay.(put her hands up) <sub>-00:56:24</sub></p>
+<p>Grace: Dani, Dani!</p>
+<p>Dani: They can shoot me, <strong>but I’m not watching you die.</strong></p>
+<p>Grace: (to Sarah) If they separate me from her, <strong>please get her out of there.</strong></p>
+<p>Sarah: All right.</p>
+</blockquote>
+<center>雖然不爽Sarah，但關乎到Dani的生命時，Grace還是低聲下氣地請求Sarah幫忙。</center>
+<hr>
+<h3><span id="dani的成長"><span id="ML3"><b>Dani的成長</b></span></span></h3>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184203.236.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184206.621.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">Dani不可置信地挑眉</font></b></center>
+<blockquote>
+<p>Sarah: We choose our weapons and our ground, we set up a kill box, and then we use Dani to bring it to us. <sub>-01:14:29</sub></p>
+<p>Grace: What?</p>
+</blockquote>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184833.376.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184852.344.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184855.520.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184953.263.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184956.136.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185023.279.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185036.903.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">"You are the boss."</font></b></center>
+<blockquote>
+<p>Sarah: And then we take it down.</p>
+<p>Grace: No. No way, <strong>Dani is not bait.</strong></p>
+<p>Carl: Sarah is right. Our one tactical advantage is that the Terminator only sees its mission. Whatever Dani goes, he will follow.</p>
+<p>Sara: Damn right it will. And I will be there.</p>
+<p>Grace: Well, <strong>I’m not about to stake her out like some goat for you.</strong></p>
+<p>Sara: What’s your plan? More running?</p>
+<p>Grace: My plan is to hide her at the bottom of a mineshaft if I have to. At least until I…</p>
+<p>Dani: Just stop it! I’m not hiding at the bottom of a mineshaft. <strong>I’m not gonna live in fear the rest of my life. Even if your plan means that might not be long. I want to stand and fight.</strong> So we choose our weapons and our ground. We’re gonna set up a…</p>
+<p>Sarah: Kill box.</p>
+<p>Dani: Kill box. And then, <strong>we’re gonna use me as bait.</strong> And then, we kill that thing.</p>
+</blockquote>
+<center>Grace開始意識到Dani的內心逐漸強大起來。</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185158.709.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185211.166.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185214.325.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185223.021.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185225.293.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185250.294.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185256.549.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Sarah: Enough of this bullshit. Let’s get serious. <strong>A Terminator has just killed your whole family. What do you do?</strong> <sub>-01:16:54</sub></p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185953.176.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190315.677.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190337.526.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190448.269.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190515.108.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191123.176.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191135.096.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191143.927.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190538.196.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">氣場兩米八的Dani</font></b></center>
+<blockquote>
+<p>Carl: Based on the weapons we have, I estimate our chances at 12%. <sub>-01:28:03</sub></p>
+<p>Dani: That’s not zero.</p>
+<p>Grace: It’s not much better.</p>
+<p>Dani: Then we have to find some more weapons and we stick to the plan. We set the trap and then we can…</p>
+<p>Grace: No, Dani, you can’t do that.</p>
+<p>Dani: Why? Because my son is supposed to save use all? And until then, what? We just keep watching people die?</p>
+<p>Grace: The future of the human race depends on you making it…</p>
+<p>Dani: I don’t give a shit about the future. Or what I’m maybe supposed to do someday. <strong>What matters are the choices we make now.</strong></p>
+<p>Grace: I’ve seen that look too many times before.</p>
+<p>Dani: You knew me. In the future.</p>
+<p>Grace: Yeah. I know you. <strong>It was you… who found me in the ruins after Judgment Day. You saved me and you raised me, and you taught me to hope.</strong> Like you saved and taught the others. You turned scavengers into militias and militias into an army. We rose up out of the ashes and we took our world back. <strong>You taught us there is no fate but what we make for ourselves.</strong> Dani, you are not the mother of some man who saves the future. <strong>You are the future.</strong> That’s why Legion wants you dead.</p>
+<p>Sarah: She’s John. You’re John.</p>
+<p>Grace: I’m sorry I didn’t tell you this before. But you told me that the Dani I’d meet in the past couldn’t handle it. <strong>But you’re not that Dani anymore.</strong></p>
+</blockquote>
+<center>Dani拒絕再度逃跑，感覺到她已經成為自己熟悉的Dani後，Grace告訴她，她才是未來救世主的真相。</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_205837.069.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210128.314.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Grace: Dani, you have to run. You have to run. We can’t protect you. <sub>-00:43:16</sub></p>
+<p>Dani: What? <strong>I’m the only one of us who can still throw a punch.</strong></p>
+<p>Grace: There is another weapon.</p>
+<p>Sarah: What?</p>
+<p>Grace: My power source.</p>
+<p>Sarah: How do we get it out of you without killing you?</p>
+<p>Grace: You can’t.</p>
+<p>Dani: <strong>No!</strong></p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211626.897.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211643.376.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211647.512.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211703.456.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211716.448.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Sarah: It’s not dead. <sub>-01:50:58</sub></p>
+<p>Dani: Wait. <strong>We gotta take you out of here.</strong></p>
+<p>Grace: My power source. Get it close, and it’ll fry his neural net.</p>
+<p>Dani: Grace…I can’t.</p>
+<p>Grace: Yes, you can. Dani. This is what you sent me here to do.</p>
+<p>Dani: No.</p>
+<p>Grace: We both knew I wasn’t coming back.</p>
+<p>Dani: I can’t.</p>
+<p>Grace: <strong>You saved me. Let me save you. Please.</strong></p>
+<p>Dani: No.</p>
+<p>Grace: You do it. Do it, Dani.</p>
+<p>Dani: <strong>I’m sorry, Grace.</strong></p>
+<p>Grace: <strong>I’m not.</strong></p>
+</blockquote>
+<center>Dani終於感覺到想要讓重要的人離開危險的心情，而Grace自知自己是最後的武器，懇求Dani讓自己用生命拯救她。</center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211757.935.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Dani: We got him, Grace. <strong>You saved me.</strong> <sub>-01:56:29</sub></p>
+</blockquote>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211857.974.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211905.966.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190818.722.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211933.125.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211940.125.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Dani: <strong>I won’t let her die for me again.</strong> <sub>-01:57:26</sub></p>
+<p>Sarah: Then you need to be ready.</p>
+</blockquote>
+<hr>
+<h3><span id="bonus"><span id="ML4"><b>Bonus</b></span></span></h3>
+<blockquote>
+<p>Sarah: She hasn’t noticed that you weigh 400 pounds? That you never sleep? <sub>-01:14:52</sub></p>
+<p>Carl: Our relationship is not physical. She appreciated that I could change diapers. Efficiently and without any complaints. I am reliable, I’m a very good listener and <strong>I’m extremely funny.</strong></p>
+</blockquote>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183929.886.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">Dani和Grace偷笑</font></b></center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_174641.403.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Dani: Hey! Grace, Grace! It’s okay. We are here. <strong>Fuck, you are heavy.</strong> <sub>-00:29:12</sub></p>
+</blockquote>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_174935.329.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_174946.977.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">重死了也不願拋下</font></b></center>
+<br>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175901.187.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175951.082.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_003816.629.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_003817.950.jpg" height="80%" width="80%"></center>
+</p>
+<blockquote>
+<p>Dani: Hey, Sarah! open the door. <sub>-00:38:02</sub></p>
+<p>Grace: Dani!</p>
+<p>Dani: You okay?</p>
+<p>Grace: Yeah, you okay?</p>
+<p>Dani: Yeah. What happened? (to Sarah) Locked me out of the room?</p>
+<p>Sarah: Sometimes mommies and daddies have to have grown-up discussions.</p>
+</blockquote>
+<br>
+<blockquote>
+<p>Sarah: What are you doing? <sub>-00:43:49</sub></p>
+<p>Grace: <strong>Future shit.</strong></p>
+</blockquote>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_004350.789.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">"Dani以外的人問問題我不想認真回答"</font></b></center>
+<br>
+<blockquote>
+<p>Dani: You just keep these around? <sub>-01:16:10</sub></p>
+<p>Carl: Even without a rogue AI taking over, I calculate a <strong>74% chance that human virilization will collapse into barbarism.</strong></p>
+</blockquote>
+<center>人類就是喜歡自相殘殺</center>
+<hr>
+<h4><span id="i-am-human-just-enhanced"><center><span id="ML4_1"><b>I am human. Just enhanced</b>.</span></center></span></h4>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_000631.919.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_000634.102.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_000736.106.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001334.896.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001433.873.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001438.752.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001514.788.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001524.287.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001525.299.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001525.423.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001527.008.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001540.356.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001540.523.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001555.567.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_001632.991.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_164623.317.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165014.859.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165151.577.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175330.046.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175343.279.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182505.680.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182613.191.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182648.640.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182725.807.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182807.678.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185506.452.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185516.811.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191640.620.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191649.100.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210251.649.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210357.009.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210542.368.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210621.647.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210710.455.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210741.943.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210748.615.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210828.846.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210844.878.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210903.109.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211039.460.jpg" height="80%" width="80%"></center>
+</p>
+<hr>
+<h4><span id="you-are-the-future"><center><span id="ML4_2"><b>You are the future.</b></span></center></span></h4>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_170136.419.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182049.277.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183438.786.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_184635.609.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185323.964.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185348.812.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185657.490.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190427.214.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191023.633.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191429.742.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191432.406.jpg" height="80%" width="80%"></center>
+</p>
+<hr>
+<h4><span id="im-not-running"><center><span id="ML4_3"><b>I’m not running.</b></span></center></span></h4>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_174908.458.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_174919.474.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185618.259.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185708.354.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_190557.284.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210222.555.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210428.585.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211023.476.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211739.215.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_211942.389.jpg" height="80%" width="80%"></center>
+</p>
+<hr>
+<h4><span id="let-me-save-you"><center><span id="ML4_4"><b>Let me save you.</b></span></center></span></h4>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165554.583.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165627.942.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165830.590.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185149.046.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_175509.662.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183743.527.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183807.223.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183810.735.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">一個自覺躲，一個自覺擋。</font></b></center>
+<br>
+<hr>
+<h4><span id="妳看我我看妳"><center><span id="ML4_5">妳看我，我看妳</span></center></span></h4>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_181911.749.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_181852.437.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_183502.610.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185938.008.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185946.369.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191242.799.jpg" height="80%" width="80%"></center>
+</p>
+<hr>
+<h4><span id="牽手手"><center><span id="ML4_6">牽手手</span></center></span></h4>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_181934.756.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_181952.597.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_182950.021.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210121.116.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_210125.675.jpg" height="80%" width="80%"></center>
+</p>
+<hr>
+<h4><span id="不管怎樣就是要抱抱"><center><span id="ML4_7">不管怎樣就是要抱抱</span></center></span></h4>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165351.992.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165408.496.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165917.301.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165934.916.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_165952.708.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_185122.814.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">Sarah & Carl: "墨鏡去哪了？"</font></b></center>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191511.709.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191546.612.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Terminator.Dark.Fate.2019.1080p.BluRay.x264-SPARKS.mkv_20200209_191728.436.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">Sarah: "知道妳們相愛了，可以別抱了嗎？"</font></b></center>
+<br>
+<p>結合各種情況，Grace對Dani超級尊敬又超級溫柔又超級保護。尊敬可以是長官和士兵關係，保護可以是家人關係，但躺大腿的溫柔注視怎麼都不符合以上兩項吧！結論，她們之間就是：&quot;救命之恩無以為報，就以身相許吧&quot;的崇拜以上，戀人未滿關係。</p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/02/09/TLWQ0108/">
+        下一篇<br>Just you
+    </a>
+    
+</nav>
+
+    
+            
+
+<div class="post-comment-wrapper">
+    <div id="disqus_thread"></div>
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?64132600"></script>
+
+
+<script>
+    var disqus_shortname = 'kayejas';
+    var disqus_config = function () {
+        this.page.url = 'https://jaskaye.github.io/2020/02/10/Terminator/';
+        this.page.identifier = '/2020/02/10/Terminator/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.body || d.head).appendChild(s);
+    })();
+</script>
+
+
+</body>
+</html>

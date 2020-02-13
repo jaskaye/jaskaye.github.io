@@ -1,0 +1,789 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>松井珠理奈 - Jas</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Jasmine">
+<meta name="description" content="恭喜已完成了人生第一篇章">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?48367475">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://jaskaye.github.io">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                標籤
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/categories/index.html">
+                分類
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Jas
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Jas</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Jas’s
+        </div>
+        <div class="nav-subtitle">
+            變成語言的想法
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            標籤
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/categories/index.html">
+            分類
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('/2020/02/13/matsui-jurina/1504 CM - ()TVCM (1080p).mp4_000023.162.jpg')">
+                <div class="post-title">
+                    松井珠理奈
+                    <div class="post-meta">
+                        <time datetime="2020-02-13T04:27:14.000Z" itemprop="datePublished">
+                            2020-02-13 15:27
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/人物/'>人物</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/記錄/'>記錄</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p><a href="#ML1"><center><b>外表很成熟的小孩</b></center></a></p>
+<p><a href="#ML2"><center><b>十七歲之前</b></center></a></p>
+<p><a href="#ML3"><center><b>十七歲到二十歲</b></center></a></p>
+<p><a href="#ML4"><center><b>二十歲的珠理奈</b></center></a></p>
+<p><a href="#ML5"><center><b>Bonus</b></center></a></p>
+<p><a href="#ML5_1"><center><b>豪華配置版黑い天使</b></center></a></p>
+<p><a href="#ML5_2"><center><b>跨越時代的Glory days</b></center></a></p>
+<p><a href="#ML5_3"><center><b>見證珠理奈成長的思い出以上</b></center></a></p>
+<p><a href="#ML5_4"><center><b>每次都帥翻天的Darkness</b></center></a></p>
+<p><a href="#ML5_5"><center><b>松井玲奈</b></center></a></p>
+<p><a href="#ML5_6"><center><b>Two Roses的變化</b></center></a></p>
+<p><a href="#ML6"><center><b>珠理奈身邊人們</b></center></a></p>
+<hr>
+<h3><span id="外表很成熟的小孩"><span id="ML1"><center><b>外表很成熟的小孩</b></center></span></span></h3>
+<p>記得初見珠理奈的時候我正處於某個短假期：夏天、獨住、劇荒。隨意找了一部日劇來看，那就是&lt;真假學園&gt;。現在看回去真是覺得這部劇萬分尷尬，真不知道當時自己是怎麼看進去的（也許是因為全員女生）。當時第一個讓我留下印象的是麻友，接著就是站在她身旁的珠理奈。我還很記得當時自己想的是：“這兩人長得好像喔。”，當然，她們兩人並不像。那時候看完第一部和第二部並沒有什麼感覺，甚至還不知道她們都來自於同一個團體。</p>
+<p>
+    <center><img src="Majisuka Gakuen 2 EP03.mp4_002343.781.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Majisuka Gakuen 2 ep02.mp4_001323.229.jpg" height="80%" width="80%"></center>
+</p>
+<p>到了2012年初，百合魂覺醒的我被一首PV覆蓋了全部網路社交平台，像是周圍有在關注日本的百合飯們都在議論著這一首PV，它就是SKE48的第八首單曲&lt;片想いFinally&gt;。單單幾張截圖就輕易引起了我的興趣，點進去網友們分享的短視頻一看，滿滿的都是福利（百合魂、少女心全爆發）。</p>
+<p>這時候我才發現：“咦？其中一個女主角我似乎在哪裡見過。”</p>
+<p>
+    <center><img src="21 片想いFinally.m2ts_000119.913.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="21 片想いFinally.m2ts_000341.688.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="21 片想いFinally.m2ts_000453.430.jpg" height="80%" width="80%"></center>
+</p>
+<p>感謝我對女生的記憶力十分良好，很快我就回憶起&lt;真假學園&gt;；再加上AKBINGO這個十分容易讓人入坑的節目，在那個新年假期我都在一集集地補檔，很快我就了解到AKB48和SKE48的存在，並且記住了大部分的主要成員們（以往多餘三個人的團體我都只能勉強記住樣子，一下子記住了十幾個人的樣貌和名字，連我自己都驚訝）。</p>
+<p>很多人在早期飯上珠理奈的時候都會被她的年齡嚇一跳，我也是其中一人。那時的珠理奈才十五歲，雖然是被她演戲時吸引了注意力，但真正飯上她是因為她的笑容和舞蹈。不知不覺的，在補全AKB48和SKE48的PV間，我的視線就一直跟著這個十一歲就加入團體的女生移動；她總是笑得如此燦爛和自信，讓我不禁好奇她的經歷和敬佩她對演藝工作的熱情。</p>
+<p>
+    <center><img src="[AKBがいっぱい][02nd.大声ダイヤモンド].mp4_000433.906.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[大水怪] AKBINGO! 2009.04.22小珠发威.avi_000623.489.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[AKBがいっぱい][14th.ポニーテールとシュシュ].mp4_000452.156.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[AKBがいっぱい][31st.桜の木になろう].mp4_000714.970.jpg" height="80%" width="80%"></center>
+</p>
+<center><b><font size="2">滿滿少年感的時代</font></b></center>
+<hr>
+<p><span id="ML2">十七歲之前的珠理奈總是可愛和帥之間隨意切換，私底下愛撒嬌、節目上愛說冷笑話、要搞笑也能拋得開偶像包袱，而跳起舞的時候就像換了一個人，氣場十分強大。</span></p>
+<p>
+    <center><img src="AKBINGO! 2009.09.16珠理奈vs女王.avi_000931.490.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="AKBINGO! 2009.09.16珠理奈vs女王.avi_001120.454.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Bimyo桃太郎珠理奈.mkv_000347.714.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[AKBがいっぱい][22nd.Beginner].mp4_000355.670.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[BDRIP][ミリオンがいっぱい][D2-10A][GIVE ME FIVE!(music-video)][AVC-1080P].mp4_003115.738.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="【MV full】 真夏のSounds good ! (Dance ver.)  AKB48[公式].mp4_000243.282.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="AKB48 - UZA  Talk (CDTV 2012.11.03).ts_000051.447.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="131011 SKE48 no Ebi-Friday Night ep02.mp4_001743.658.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="131122 SKE48 no Ebi-Friday Night ep08.mp4_000652.145.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="120713周刊AKB SKE48 惊吓企划(小珠).mp4_001803.633.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="SKE48 ライあっ！GAME disc1-ライあっ！GAMEディレクターカット.mkv_014501.144.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="西武二日目マジすか2连唱.mkv_000926.926.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="「Beginner」松井珠理奈&渡辺麻友センターver..mkv_000030.221.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[AKBがいっぱい][31st.桜の木になろう].mp4_000957.622.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="120824 呜吼大游行[TK] --1830m东京巨蛋Day1.mkv_000247.167.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="クロス.wmv_000036.125.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="パジャマドライブ.wmv_000028.811.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="日清 ＲＥＡＬ松井珠理奈篇もっと頑張ろう.mp4_000011.132.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="日清 ＲＥＡＬ松井珠理奈篇もっと頑張ろう.mp4_000035.603.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[BDRIP][ミリオンがいっぱい][D4-9][スクラップ&ビルド][AVC-1080P].mp4_000117.508.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[lwtnbmy] SKE48 - 片想いFinally (Best Artist 2012 2012.11.28).ts_000010.018.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[m2ts]AKB48 in TOKYO DOME AKB48 in TOKYO DOME~1830mの夢~二日上半場.m2ts_011959.170.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="120914 Majisuka Gakuen 3 ep09.mp4_001228.346.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="120914 Majisuka Gakuen 3 ep09.mp4_001247.700.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="131206 SKE48 no Ebi-Friday Night EP10.mp4_000442.191.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="141011 SKE48 Ebi Calcio ep01.mp4_001711.396.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="ブラックボード〜時代を戦った教師たち〜 第3夜(2).jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="兼任发表.mkv_000213.156.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="SKE48-片想いFinally + Talk (Music Station - 2012.01.27).ts_000336.581.jpg" height="80%" width="80%"></center>
+</p>
+<hr>
+<p><span id="ML3">十七歲到二十歲前是她逐漸成長的時期，她跳舞的時候不再一味用力跳動和笑得燦爛，開始會去感受每一首所表達的意思，舞蹈的風格變得多元了起來。當時沒有太大的感覺，現在回頭看才發現，她是在這段時間裡一點點、一點點地磨平了自己的棱角。</span></p>
+<p>
+    <center><img src="[T.K.M.N字幕组]AKB48グループ臨時総会～白黒つけようじゃないか！～AKB48グループ総出演公演 昼の部 720p.mkv_000149.904.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="SpecialDisc[01]メイキング of SKE48 春コン2013「変わらないこと。ずっと仲間なこと」.mkv_005333.068.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="【三组联合】151224 AKB48チームＫ「最終ベルが鳴る」公演 松井珠理奈を送る会.mp4_015857.120.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="1.【SKE48】「今夜Shake it！」160905 美浜海遊祭2016×SKE48 Love・Crescendo-1.1(Av6181145,P1).mp4_000021.291.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="141108 SKE48 Ebi Calcio ep05.mp4_000250.964.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="141108 SKE48 Ebi Calcio ep05.mp4_000306.819.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="D1a DOCUMENTARY of SKE48 Theatre Edition.mkv_013518.256.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="SKE48 炸虾赌场 - Making (珠理奈 CUT).mp4 - 1.1(Av3785361,P1).Flv_001131.277.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="SKE48 - Escape (140412 AKB48 SHOW!).mpg_000025.888.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="D4a DOCUMENTARY of SKE48 Director Cut Re STORIES Part2 starting over.mkv_003726.978.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="D4a DOCUMENTARY of SKE48 Director Cut Re STORIES Part2 starting over.mkv_011125.369.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="D4a DOCUMENTARY of SKE48 Director Cut Re STORIES Part2 starting over.mkv_015101.398.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Encore-赤いピンヒールとプロフェッサー.mp4_000014.047.jpg" height="80%" width="80%"></center>
+</p>
+<p>記得那時不少成員陸續畢業，還有工作越來越繁重導致難以在兩團間兼顧好的雙重壓力，就算是旁人都能感覺到珠理奈似乎無法像當初那樣無憂無慮。在Sae畢業後，就連只是飯的我也替珠理奈覺得疲累，慢慢地也減少了對日本偶像團的關注，轉去其他地方找療愈。</p>
+<p>然而，身邊同伴逐漸減少後的珠理奈不能逃，只能再次面對。即使是她，我也以為她會撐不久。結果再度被她的消息擠爆網路的時候，她居然鳳凰涅槃了。</p>
+<hr>
+<p><span id="ML4">2017年，二十歲的珠理奈。</span></p>
+<p>
+    <center><img src="RH2017 18 今夜はShake it!.mkv_000013.764.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2017 18 今夜はShake it!.mkv_000035.802.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2017 18 今夜はShake it!.mkv_000049.914.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2017 18 今夜はShake it!.mkv_000108.281.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2017 18 今夜はShake it!.mkv_000305.516.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2017 98 思い出以上.mkv_000028.913.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="28.【中字】AKB48G 2017RH 松井珠理奈参与歌曲及MC 感受金发的成熟魅力【猫嘴字幕组】-28.03.赤いピンヒールとプロフェッサー(Av12552887,P28).mp4_000011.407.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2017 珠shake it服装MC.mkv_000007.492.jpg" height="80%" width="80%"></center>
+</p>
+<p>跟以往不一樣的自信、笑起來又過分溫柔，唱腔不再是一貫的元氣、可帥可魅的珠理奈嚇了我一跳，當時也只不過是一、兩年沒有看RH，怎麼我家的珠理奈成長得這麼快？！（沒想到有一天會從女友飯變成老媽飯）</p>
+<p>後面才知道，原來因拍戲接觸到摔角激勵了她。</p>
+<p>
+    <center><img src="EP09 CUT(Av9272339,P1).mp4_000007.840.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="170121 豆腐プロレス　第1ラウンド　戦え女子高生.ts.0.ts_000005.253.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="(Av11239831,P1).mp4_000213.004.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="CUT(Av9272339,P2).mp4_000024.116.jpg" height="80%" width="80%"></center>
+</p>
+<p>補檔看Showroom直播時能感覺到珠理奈還是珠理奈，只是她不再亂衝，而是心中多了一種信仰般的強大。她對人們的酸言酸語不再是啞忍，她會反擊或無視那些無理的攻擊；她不是銅墻鐵壁，只是倒下後一次又一次地重新站起來。</p>
+<p>
+    <center><img src="8.【中字】松井珠理奈作词原创SOLO合集（10首）-8.yolo(Av9119168,P8).mp4_000010.603.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="bf28c04cgy1ftnajfaeq4j20r70xcwh5.jpg" height="80%" width="80%"></center>
+</p>
+<p>之後的她努力用笑容祝賀真那的畢業；</p>
+<p>
+    <center><img src="[Melonpan字幕组]Toyosuta-D6 Making [720P].mkv_005844.671.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="ft.真那 神々の領域.mkv_000241.626.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="ft.真那 神々の領域.mkv_000256.860.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="ft.真那 神々の領域.mkv_000351.542.jpg" height="80%" width="80%"></center>
+</p>
+<p>    <center><img src="SKE48 21SP1.mkv_001256.349.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="SKE48 21SP1.mkv_001427.635.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="SKE48 21SP1.mkv_003802.508.jpg" height="80%" width="80%"></center></p>
+盡情享受舞台；
+<p>
+    <center><img src="SKE48_20171005175300_HD.ts_015512.290.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="SKE48_20171005175300_HD.ts_021033.149.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="SKE48_20171005175300_HD.ts_021902.322.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="18 野蛮な求愛.mkv_000020.069.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="18 野蛮な求愛.mkv_000035.435.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="18 野蛮な求愛.mkv_000215.204.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Escape.mkv_000004.245.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Escape.mkv_000011.905.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="Parting shot.mp4_000041.120.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2018 37 赤いピンヒールとプロフェッサー.mkv_000013.743.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="RH2018 37 赤いピンヒールとプロフェッサー.mkv_000020.200.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="20181004-1700 SKE48 10周年記念特別公演（前編） (DMMライブ配信・HD定点).MP4_000136.194.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="D2 SKE48 HaruCon Day.mkv_20181006_203739.254.png" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="D1 SKE48 Nyugakushiki.mkv_20181005_173658.752.png" height="80%" width="80%"></center>
+</p>
+<p>然後，在第十屆總選舉和自己的家鄉這種天時地利的狀態下帶著必須要得勝的壓力參選。當時一堆跟我一樣半出坑或者已出坑的人都跑回來隨著坑內的人一起投票，就為了讓珠理奈完成心願，幸好，最後人和也集齊了。</p>
+<p>
+    <center><img src="【選抜総選挙×フジテレビ】「AKB48　第6回選抜総選挙」TVスポット30秒 _ AKB48[公式].mp4_000011.094.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="【中字】SKE48 纪录片电影『偶像』预告片 松井珠理奈【宵夜字幕】 - 1.【中字】ドキュメンタリー映画「アイドル」2018.10.19 ROADSHO(Av32720210,P1).mp4_000040.329.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="180616.ts_000840.787.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="180616.ts_000921.710.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[MV] AKB48 - Sentimental Train (Matsui Jurina ver.) [720p h264 TS].TS_000320.733.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="[MV] AKB48 - Sentimental Train (Matsui Jurina ver.) [720p h264 TS].TS_000836.951.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="bf28c04cgy1fve4oxn844j20zk0k0dio.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="180906 SKE48 松井珠理奈復帰挨拶@SKE48劇場.ts_000108.889.jpg" height="80%" width="80%"></center>
+</p>
+<p>
+    <center><img src="FLASH10月16日 復活！SKE48「松井珠理奈」の元気な生声を大公開.mp4_000001.487.jpg" height="80%" width="80%"></center>
+</p>
+<p>雖然付出的代價是生理和心理都受到了因壓力造成的損傷，但怎麼說都完成了一個心願。之後三番四次的修養（增肥），飯們的反應都是&quot;雖然很想看見你，但最重要還是要養好身體&quot;。（每個都變成了老媽老爸飯）</p>
+<p>2019年宣佈暫停舉辦總選舉，原因是團體內的其他成員普遍知名度不足。大家都心知肚明，AKB Group是要到頭了，第十屆總選舉前4名都是姐妹團，本部最強的岡田奈奈也只得第五名；姐妹團的center們也一個個畢業，不論是誰的飯都在暗示自己的偶像差不多就畢業吧。所以當2020年2月的現在，當我看到珠理奈宣佈畢業的瞬間，心裡是鬆了一口氣。不論如何，還是感恩AKB48的提攜、SKE48的栽培。</p>
+<hr>
+<h3><span id="bonus"><span id="ML5"><b>Bonus</b></span></span></h3>
+<p>    <center><img src="[AKBがいっぱい][03rd.10年桜].mp4_000452.658.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[AKBがいっぱい][05th.言い訳Maybe].mp4_000215.734.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[AKBがいっぱい][22nd.Beginner].mp4_000400.509.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[AKBがいっぱい][31st.桜の木になろう].mp4_001157.235.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="bf28c04cjw1e2ije26j9pj.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[BDREMUX][ミリオンがいっぱい][D4-6A][UZA(music-video)][FULLHD1080P].ts_000032.175.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[BDREMUX][ミリオンがいっぱい][D4-6A][UZA(music-video)][FULLHD1080P].ts_000356.532.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【MV full】 Green Flash   AKB48[公式].mp4_000301.822.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【MV full】 Green Flash   AKB48[公式].mp4_000307.317.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【MV full】 Green Flash   AKB48[公式].mp4_000418.590.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【MV full】 唇にBe My Baby  AKB48[公式].mp4_000851.658.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【T.K.M.N字幕組】130212 So long! 第2夜.mkv_000435.729.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【网线太长字幕组】Making of マジすか学園5 珠理奈CUT.mp4_000254.252.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="1.【AKB】第六回猜拳大会 松井珠理奈cut【生肉】-1.1(Av2916243,P1).mp4_000020.874.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="7f9a1803gw1eve5ityfr3j21400miq8b.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="120914 Majisuka Gakuen 3 ep09.mp4_001224.538.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="bf28c04cgw1efcnuzlhblj20p00gmjte.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="Bimyo桃太郎珠理奈.mkv_000011.777.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="D1 SKE48 Nyugakushiki.mkv_022453.929.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="bf28c04cgy1floasr160jj20u00min0c.jpg" height="80%" width="80%"></center></p>
+<hr>
+<h4><span id="豪華配置版黑い天使"><span id="ML5_1"><center><b>豪華配置版黑い天使</b></center></span></span></h4>
+<p>    <center><img src="[m2ts]AKB48 in TOKYO DOME AKB48 in TOKYO DOME~1830mの夢~最終日上半場.m2ts_011344.719.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[m2ts]AKB48 in TOKYO DOME AKB48 in TOKYO DOME~1830mの夢~最終日上半場.m2ts_011346.590.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[m2ts]AKB48 in TOKYO DOME AKB48 in TOKYO DOME~1830mの夢~最終日上半場.m2ts_011543.684.jpg" height="80%" width="80%"></center></p>
+<hr>
+<h4><span id="跨越時代的glory-days"><span id="ML5_2"><center><b>跨越時代的Glory days</b></center></span></span></h4>
+<p>    <center><img src="秋元才加、松井珠理奈、宮澤佐江 - Glory days.mkv_000012.374.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[Melonpan字幕组]Toyosuta-D1 Concert Day 1 [720P].mkv_014218.285.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[Melonpan字幕组]Toyosuta-D1 Concert Day 1 [720P].mkv_014252.112.jpg" height="80%" width="80%"></center></p>
+<hr>
+<h4><span id="見證珠理奈成長的思い出以上"><span id="ML5_3"><center><b>見證珠理奈成長的思い出以上</b></center></span></span></h4>
+<p>    <center><img src="130127 思い出以上 [珠 鲣 可可,Top22] --TDC2013 best100 四日目.mkv_000103.565.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="SKE48 リクエストアワーセットリストベスト50 2013 Day2 (25位~1位) .mkv_014427.309.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="140-111 思い出以上.mkv_000226.063.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="思い出以上.MP4_000104.037.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="RH2017 98 思い出以上.mkv_000103.161.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="2018.100 思い出以上.mkv_000107.332.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="130127 思い出以上 [珠 鲣 可可,Top22] --TDC2013 best100 四日目.mkv_000007.216.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="141102 思い出以上 [珠 木下 宮前 ,Top4] - SKE48 Request Hour Best 242 2014 (1080p BDrip) .mkv_000220.626.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="140-111 思い出以上.mkv_000036.512.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="RH2017 98 思い出以上.mkv_000014.788.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="2018.100 思い出以上.mkv_000024.690.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="2018.100 思い出以上.mkv_000033.488.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="130127 思い出以上 [珠 鲣 可可,Top22] --TDC2013 best100 四日目.mkv_000018.149.jpg" height="80%" width="80%"></center></p>
+<hr>
+<h4><span id="每次都帥翻天的darkness"><span id="ML5_4"><center><b>每次都帥翻天的Darkness</b></center></span></span></h4>
+<p>    <center><img src="141101 Darkness [Top59] - SKE48 Request Hour Best 242 2014 (1080p BDrip) .mkv_000036.964.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="141101 Darkness [Top59] - SKE48 Request Hour Best 242 2014 (1080p BDrip) .mkv_000036.649.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【豆乳燒丸子】春コンinさいたまスーパーアリーナ_ SKE48単独公演.mkv_020456.088.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【豆乳燒丸子】春コンinさいたまスーパーアリーナ_ SKE48単独公演.mkv_020447.068.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【豆乳燒丸子】春コンinさいたまスーパーアリーナ_ SKE48単独公演.mkv_020445.448.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="A2.Darkness music video 720.mkv_000011.194.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="A2.Darkness music video 720.mkv_000027.754.jpg" height="80%" width="80%"></center></p>
+喜歡的歌曲實在是太多，要是詳說的話估計能寫上一年。不論是在AKB48還是在SKE48都有數不過來的經典，每次必提的<大声ダイヤモンド>、<桜の木になろう>之類的就不說了；好聽又有意義，PV卻有點奇怪的<世界が泣いてるなら>要细说也说不完。
+<p>但對我個人來說，SKE48有一首無法避免的歌，因為合唱者是個不能避免的人；不是無法避免，是不能避免，如果免了就等於把珠理奈在SKE48中一大半的時間省略了。</p>
+<hr>
+<h3><span id="松井玲奈"><span id="ML5_5"><b>松井玲奈</b></span></span></h3>
+<p>作為看&lt;片想いFinally&gt;而認識SKE48的人，松井玲奈是另外一個重點，也是SKE48的一個重點。在我看來，她們之間並沒有什麼問題，所以沒有必要刻意避開不說。</p>
+<p>我也曾經喜歡過W松井這樣的搭配，但因為飯偶像總會看到一些偏激的言論，導致飯偶像情緒不佳；CP飯想要把她們拉在一起，單推飯想要把她們分開，所以死循環造成了各方矛盾。於是乾脆放棄飯CP，還不如單獨飯她們兩人。有交集當然好，像是其他人和她們兩人感情好我也看得開心；沒有交集也不覺得可惜，合不合得來這種感覺實在太主觀了，勉強不了。</p>
+<p>然而只有Two Roses這首歌是我至今仍然覺得只有她們適合唱的歌，就像是Give me five不是敦子、優子、たかみな站在一起就感覺不對；ウッホウッホホ不是才加唱就感覺不對；River只有たかみな帶頭才有氣勢的那種感覺。這些不像是&lt;黒い天使&gt;、&lt;禁じられた2人&gt;這些雖然原唱也不錯，但總會期待洗牌。</p>
+<p>在Sae畢業的演唱會中，Sae和珠理奈合唱Two Roses的時候也不差，而且還有創新動作，感覺很新鮮；但腦海中不停浮現玲奈的身影，可能是因為看過太多太多次她們的合唱，不知不覺就會開始對比。（沒有辦法看到和服版的Two Roses是一大遺憾）</p>
+<br>
+<h4><span id="two-roses的變化"><span id="ML5_6"><center><b>Two Roses的變化</b></center></span></span></h4>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 1.101005 SKE汗量演唱会 Two Roses(Av3378762,P1).Mp4_000255.506.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 2.101116 澳門演唱會 Two Roses(Av3378762,P2).Mp4_000445.239.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 3.101127 1!2!3!4!请多关照!胜负是今后! D1 Two Ros(Av3378762,P3).Mp4_000445.636.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="TDC2013 [2日目] 70.TWO ROSES.m2ts_000311.366.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="110-081 TWO ROSES.mkv_000304.253.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="AKB48 リクエストアワーセットリストベスト200 2014 (100~1 ver.) Disc1 - 昼の部 (100 - 76位).mkv_005547.706.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011154.470.jpg" height="80%" width="80%"></center></p>
+<br>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 2.101116 澳門演唱會 Two Roses(Av3378762,P2).Mp4_000332.884.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000201.266.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="AKB48 リクエストアワーセットリストベスト200 2014 (100~1 ver.) Disc1 - 昼の部 (100 - 76位).mkv_005527.134.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="141102 Two Roses [W松井 ,Top22] - SKE48 Request Hour Best 242 2014 (1080p BDrip) .mkv_000202.686.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="110-081 TWO ROSES.mkv_000156.803.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011046.848.jpg" height="80%" width="80%"></center></p>
+<br>
+<p>    <center><img src="TDC2013 [2日目] 70.TWO ROSES.m2ts_000250.367.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="AKB48 リクエストアワーセットリストベスト200 2014 (100~1 ver.) Disc1 - 昼の部 (100 - 76位).mkv_005524.375.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011044.368.jpg" height="80%" width="80%"></center></p>
+<br>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 4. 1!2!3!4!请多关照!胜负是今后! D2 Two Roses(Av3378762,P4).Mp4_000133.609.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="AKB48 リクエストアワーセットリストベスト200 2014 (100~1 ver.) Disc1 - 昼の部 (100 - 76位).mkv_005507.283.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="141102 Two Roses [W松井 ,Top22] - SKE48 Request Hour Best 242 2014 (1080p BDrip) .mkv_000229.164.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="110-081 TWO ROSES.mkv_000137.685.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011027.454.jpg" height="80%" width="80%"></center></p>
+<br>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 1.101005 SKE汗量演唱会 Two Roses(Av3378762,P1).Mp4_000144.415.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 2.101116 澳門演唱會 Two Roses(Av3378762,P2).Mp4_000145.072.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 4. 1!2!3!4!请多关照!胜负是今后! D2 Two Roses(Av3378762,P4).Mp4_000145.299.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="SKE48 リクエストアワーセットリストベスト50 2013 Day2 (25位~1位) .mkv_010458.057.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="141102 Two Roses [W松井 ,Top22] - SKE48 Request Hour Best 242 2014 (1080p BDrip) .mkv_000154.022.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011038.057.jpg" height="80%" width="80%"></center></p>
+<br>
+<p><span id="SML5"><a href="#SML1-5"><center><b>2010年 10月演唱會 ↓</b></center></a></span></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 1.101005 SKE汗量演唱会 Two Roses(Av3378762,P1).Mp4_000026.788.jpg" height="80%" width="80%"></center></p>
+<p><span id="SML1"><a href="#SML1-1"><center><b>2010年 11月演唱會 ↓</b></center></a></span></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 3.101127 1!2!3!4!请多关照!胜负是今后! D1 Two Ros(Av3378762,P3).Mp4_000030.719.jpg" height="80%" width="80%"></center></p>
+<p><span id="SML2"><a href="#SML1-2"><center><b>2011年 SKE48 Best 50 ↓</b></center></a></span></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000034.611.jpg" height="80%" width="80%"></center></p>
+<p><span id="SML3"><a href="#SML1-3"><center><b>2013年 AKB48 TDC ↓</b></center></a></span></p>
+<p>    <center><img src="TDC2013 [2日目] 70.TWO ROSES.m2ts_000037.435.jpg" height="80%" width="80%"></center></p>
+<p><span id="SML6"><a href="#SML1-6"><center><b>2013年 SKE48 Best 50 ↓</b></center></a></span></p>
+<p>    <center><img src="SKE48 リクエストアワーセットリストベスト50 2013 Day2 (25位~1位) .mkv_010340.634.jpg" height="80%" width="80%"></center></p>
+<p><span id="SML7"><a href="#SML1-7"><center><b>2014年 AKB48 RH ↓</b></center></a></span></p>
+<p>    <center><img src="AKB48 リクエストアワーセットリストベスト200 2014 (100~1 ver.) Disc1 - 昼の部 (100 - 76位).mkv_005307.049.jpg" height="80%" width="80%"></center></p>
+<p><span id="SML4"><a href="#SML1-4"><center><b>2014年 SKE48 RH ↓</b></center></a></span></p>
+<p>    <center><img src="141102 Two Roses [W松井 ,Top22] - SKE48 Request Hour Best 242 2014 (1080p BDrip) .mkv_000034.779.jpg" height="80%" width="80%"></center></p>
+<center><b>2015年 SKE48 RH ↓</b></center>
+<p>    <center><img src="110-081 TWO ROSES.mkv_000029.853.jpg" height="80%" width="80%"></center></p>
+<center><b>2016年 Sae畢業演唱會 ↓</b></center>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_010919.549.jpg" height="80%" width="80%"></center></p>
+2010-2011年的Two Roses是完整的4分鐘，到了2011年的Best 50開始就簡短成3分鐘，剪去了幾個動作和第二段的主歌，直接跳去副歌。
+<p>最明顯的是以下幾點：</p>
+<h5><span id="一-開場背對背之後的轉身"><center><b>一、開場背對背之後的轉身：</b></center></span></h5>
+<p><span id="SML1-1"><a href="#SML1">2010年</a>的時候兩人是<strong>同時轉身面對面、各自往旁邊跨一步，<strong>最後同時向著對方轉身，面對彼此。<span id="SML1-2"><a href="#SML2">2011年</a>的Best 50變成了</span></strong>玲奈往前走一步、珠理奈先轉向玲奈背面，兩人面向同一個方向往旁邊跨一步</strong>，最後同時向著對方轉身，面對彼此。不知道是2011的版本跳錯，還是覺得2010版的動作比較好，<span id="SML1-3"><a href="#SML3">2013年</a>的版本又回到了2011年的動作，只是一開始就故意稍微有點錯位；直到<span id="SML1-4"><a href="#SML4">2014</a>年，這個轉身動作就固定成彼此都 <strong>先往旁邊跨一步，</strong> 最後同時向著對方轉身，面對彼此。</span></span></span></p>
+<br>
+<h5><span id="二-被精簡的動作"><center><b>二、被精簡的動作：</b></center></span></h5>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 1.101005 SKE汗量演唱会 Two Roses(Av3378762,P1).Mp4_000205.029.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 3.101127 1!2!3!4!请多关照!胜负是今后! D1 Two Ros(Av3378762,P3).Mp4_000207.637.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 4. 1!2!3!4!请多关照!胜负是今后! D2 Two Roses(Av3378762,P4).Mp4_000200.544.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 3.101127 1!2!3!4!请多关照!胜负是今后! D1 Two Ros(Av3378762,P3).Mp4_000212.590.jpg" height="80%" width="80%"></center></p>
+上面前後站位的觀音手和背對背的舞蹈刪除，替換成原本放在後面的勾手動作和各自站一邊的手部舞蹈。（雖然每次看都覺得是在結印準備發大招）
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000207.831.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="110-081 TWO ROSES.mkv_000201.755.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000212.466.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000213.037.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000214.070.jpg" height="80%" width="80%"></center></p>
+<br>
+<h5><span id="三-服裝改變"><center><b>三、服裝改變：</b></center></span></h5>
+<p>2010年的<span id="SML1-5"><a href="#SML5">紅藍服裝</a>只穿了不夠一年（懷疑只穿了那一場），2010-2013是經典的<span id="SML1-6"><a href="#SML6">黑白服裝</a>，2014年後就是<span id="SML1-7"><a href="#SML7">新的紅藍服裝</a>。在2014年 SKE48 RH的Two Roses評論音軌裡玲奈有提到新服裝是在AKB48的RH時，AKB48的服裝師給她們準備的，可惜之後也只穿了三場。（AKB48 2014 RH，SKE48 2014 RH，SKE48 2015 RH）</span></span></span></p>
+<br>
+<h5><span id="四-小手勢"><center><b>四、小手勢：</b></center></span></h5>
+<center>2010年版，珠理奈唱第一段的最後一句歌詞時，手勢是這樣 ↓</center>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 3.101127 1!2!3!4!请多关照!胜负是今后! D1 Two Ros(Av3378762,P3).Mp4_000047.699.jpg" height="80%" width="80%"></center></p>
+<center>2011年後變成了摸臉 ↓</center>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000056.869.jpg" height="80%" width="80%"></center></p>
+<center>2010年版，玲奈一開口的手勢是正手，2011年的Best 50後固定成反手。</center>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 4. 1!2!3!4!请多关照!胜负是今后! D2 Two Roses(Av3378762,P4).Mp4_000053.225.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000102.148.jpg" height="80%" width="80%"></center></p>
+<br>
+<h5><span id="五-大改的two-roses"><center><b>五、大改的Two Roses：</b></center></span></h5>
+<p>久違了5年，Two Roses再度出現在SKE48的演唱會中是Sae的畢業演唱會。不論是舞蹈、服裝還是合唱者都變了，就連珠理奈的唱腔也不一樣了。這樣的改變不知道是成就了以往的Two Roses變成了W松井的專屬，還是成就了2016年版的Two Roses是Sae和珠理奈的專屬。</p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011051.079.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011056.322.jpg" height="80%" width="80%"></center></p>
+<br>
+<p>    <center><img src="【w松井】Two Roses现场版合集（松井玲奈X松井珠理奈） - 5.2011 SKE best50 Two Roses [Top25](Av3378762,P5).Mp4_000042.182.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_011013.108.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="SKE48 リクエストアワーセットリストベスト50 2013 Day2 (25位~1位) .mkv_010404.620.jpg" height="80%" width="80%"></center></p>    
+<p>    <center><img src="泣がないぞ毕业演唱会.mkv_010928.446.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="110-081 TWO ROSES.mkv_000036.646.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="110-081 TWO ROSES.mkv_000037.716.jpg" height="80%" width="80%"></center></p>
+<br>
+<h4><span id="合唱當下的對看"><center><b>合唱當下的對看</b></center></span></h4>
+<p>    <center><img src="TDC2013 [2日目] 70.TWO ROSES.m2ts_000036.531.jpg" height="80%" width="80%"></center></p>
+上圖的Two Roses是2013年Best 50的兩人開場背對背之後轉身的時刻；玲奈罕見地在轉身後看了珠理奈一眼，還微微地點了點頭。很想知道是不是因為2012年Two Roses完全沒有在兩邊的RH上榜，演唱會也沒有出現，所以沒怎麼練這首歌的兩人有點怕自己跳錯，在跟對方確認舞步？（笑）
+<p>    <center><img src="[Melonpan字幕组]Toyosuta-D1 Concert Day 1 [720P].mkv_020002.622.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="[Melonpan字幕组]Toyosuta-D6 Making [720P].mkv_004611.200.jpg" height="80%" width="80%"></center></p>
+<br>
+<hr>
+<h3><span id="珠理奈身邊人們"><span id="ML6"><center><b>珠理奈身邊人們</b></center></span></span></h3>
+<center>稱呼過珠理奈為王子的蘇醬</center>
+<p>    <center><img src="[BDRIP][ミリオンがいっぱい][D2-12][NEW SHIP][AVC-1080P].mp4_000237.050.jpg" height="80%" width="80%"></center></p>
+<center>一直愛護珠理奈的麻里子</center>
+<p>    <center><img src="65a4a584gw1e4e8ecx8vhj20gl0b140g.jpg" height="80%" width="80%"></center></p>
+<center>超級溫柔的丸子</center>
+<p>    <center><img src="[Melonpan字幕组]Toyosuta-D6 Making [720P].mkv_010151.161.jpg" height="80%" width="80%"></center></p>
+<center>讓珠理奈安心的真那</center>
+<p>    <center><img src="bf28c04cgy1fsf3hrdgklj217j0t1aeo.jpg" height="80%" width="80%"></center></p>
+<center>在舞台上跟珠理奈感覺很相似的樂樂</center>
+<p>    <center><img src="D4a DOCUMENTARY of SKE48 Director Cut Re STORIES Part2 starting over.mkv_012437.716.jpg" height="80%" width="80%"></center></p>
+<center>跟珠理奈一起奮鬥的あかりん</center>
+<p>    <center><img src="bf28c04cgy1fw81keotuej21520usdka.jpg" height="80%" width="80%"></center></p>
+<center>總是模仿珠理奈的みずき</center>
+<p>    <center><img src="枯葉のステーション／松井珠（ピアノ桑原）.mp4_000034.803.jpg" height="80%" width="80%"></center></p>
+還有大姐、にしし、ちゅり...珠理奈在團體中的12年間有太多太多的可以說，可是除非出書，否則是寫不完的。
+<p>一開始是被珠理奈吸引，後來被團體裡的笑聲而離不開。現在大家都畢業了，珠理奈也要離開SKE48了；見證珠理奈從無論什麼時候都元氣十足到帥氣和嫵媚轉換自如，對我來說她是一個傳說，每個在AKB48總選舉中登過頂的都是一個傳說。九月之後就是關注她作為“松井珠理奈”的個人活動了！</p>
+<p>不知道畢業演唱會有誰驚喜出演，有些前成員離開太久應該最多只會去看演唱會；麻里子也不太可能出現在SKE48的演唱會，但真那99%會出現！</p>
+<p>    <center><img src="【荣联合字幕组】170908 SKE48×美浜海遊祭2017.mp4_002430.289.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【荣联合字幕组】170908 SKE48×美浜海遊祭2017.mp4_002442.430.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【荣联合字幕组】170908 SKE48×美浜海遊祭2017.mp4_002450.749.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="【荣联合字幕组】170908 SKE48×美浜海遊祭2017.mp4_002452.163.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="D1a DOCUMENTARY of SKE48 Theatre Edition.mkv_002010.249.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="D4a DOCUMENTARY of SKE48 Director Cut Re STORIES Part2 starting over.mkv_015252.948.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="Majisuka Gakuen 2 EP09.mp4_001240.833.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="D1d DOCUMENTARY of SKE48 Theme Song (Movie Ver).mkv_000104.354.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="チキンLINE.mkv_000020.227.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="いきなりパンチライン.mp4_000019.816.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="いきなりパンチライン.mp4_000331.109.jpg" height="80%" width="80%"></center></p>
+<p>    <center><img src="6694db953f00980ed0135e54_副本.jpg" height="80%" width="80%"></center></p>
+<br>
+<center>畢業快樂！</center>
+<center><font size="2"><b><s>崽，畢業演唱會前要努力減肥喔</s></b></font></center></世界が泣いてるなら></桜の木になろう></大声ダイヤモンド>
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2020/02/10/Terminator/">
+        下一篇<br>Grace and Dani
+    </a>
+    
+</nav>
+
+    
+            
+
+<div class="post-comment-wrapper">
+    <div id="disqus_thread"></div>
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?62050851"></script>
+
+
+<script>
+    var disqus_shortname = 'kayejas';
+    var disqus_config = function () {
+        this.page.url = 'https://jaskaye.github.io/2020/02/13/matsui-jurina/';
+        this.page.identifier = '/2020/02/13/matsui-jurina/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.body || d.head).appendChild(s);
+    })();
+</script>
+
+
+</body>
+</html>

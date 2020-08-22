@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Lez Bomb - Jas</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Jasmine">
+<meta name="description" content="終於擠入俗套的喜劇模式">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?56869926">
+
+<script src="/js/loadCSS.js"></script>
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Material+Icons");
+    (function (d) {
+        var config = {
+                kitId: 'dwg1tuc',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h = d.documentElement, t = setTimeout(function () {
+                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            }, config.scriptTimeout), tk = d.createElement("script"), f = false,
+            s = d.getElementsByTagName("script")[0], a;
+        h.className += " wf-loading";
+        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+            a = this.readyState;
+            if (f || a && a != "complete" && a != "loaded") return;
+            f = true;
+            clearTimeout(t);
+            try {
+                Typekit.load(config)
+            } catch (e) {
+            }
+        };
+        s.parentNode.insertBefore(tk, s)
+    })(document);
+</script>
+<noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+</noscript>
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div id="top"></div>
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="https://jaskaye.github.io">
+                首頁
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/archives">
+                歸檔
+            </a>
+            
+
+            
+            
+            <a class="a-block drawer-menu-item false" href="/about/index.html">
+                關於我
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/tags/index.html">
+                標籤
+            </a>
+            
+            <a class="a-block drawer-menu-item false" href="/categories/index.html">
+                分類
+            </a>
+            
+
+            
+            <a class="a-block drawer-menu-item" href="/atom.xml">
+                RSS
+            </a>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            Jas
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">Jas</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            Jas’s
+        </div>
+        <div class="nav-subtitle">
+            變成語言的想法
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+        <a class="a-block no-tint nav-link-item false" href="/archives">
+            歸檔
+        </a>
+        
+
+        
+        
+        <a class="a-block nav-link-item false" href="/about/index.html">
+            關於我
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/tags/index.html">
+            標籤
+        </a>
+        
+        <a class="a-block nav-link-item false" href="/categories/index.html">
+            分類
+        </a>
+        
+
+        
+        <a class="a-block no-tint nav-link-item" href="/atom.xml">
+            RSS
+        </a>
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+    </div>
+</div>
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://i.imgur.com/5M3chrT.jpg')">
+                <div class="post-title">
+                    Lez Bomb
+                    <div class="post-meta">
+                        <time datetime="2019-07-23T09:17:56.000Z" itemprop="datePublished">
+                            2019-07-23 19:17
+                        </time>&nbsp;
+                        
+                        
+                        <i class="material-icons" style="">folder</i>
+                        
+                        <a href='/categories/觀影-讀後筆記/'>觀影/讀後筆記</a>
+                        
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/Lesbian/'>Lesbian</a>, 
+                        
+                        <a href='/tags/Movies/'>Movies</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>看標題似乎會誤會這部片是部爛片，恰恰相反，這是另類的稱讚。<br>
+以往的愛情喜劇就是看男女主角開頭互相誤會，然後變成歡喜冤家最後成為一對。或者是男女主角互相喜歡，但因為各種小誤會而無法告白，拖到最後一刻才發現彼此心意。</p>
+<p>這種戲碼看多了就自然猜到結局，但仍然享受戲中的笑點看下去。<br>
+然後開始接觸到Les戲，然後不俗套的劇情出現震撼你的感官和想法。</p>
+<p>只是貼近現實的戲碼90%都會是BE結尾，不俗套但虐心（雖然有幾部還真的虐得挺爽）即使HE結尾也要經過一層層層層層的虐心才能達成，也就養成了很多人看之前都會先問一句：“是HE嗎？”來保護已經弱不禁風的小心臟。</p>
+<p>幸好，近年來大眾的接受度開始上升，雖然不到皆大歡喜的程度，但起碼能從一些影視中探出一絲放鬆。</p>
+<p>所以我也在想什麼時候可以看一部簡簡單單、俗套戲碼的les電影呢？沒有苦大情仇，沒有痛苦的出櫃，沒有前女友要嫁人新娘不是我的戲碼，只專注于兩位女主角的輕鬆喜劇。</p>
+<p>接著有幸遇到了Jenna Laurenzo的作品。</p>
+<p>Jenna Laurenzo，演員兼導演，自編自導自演過一部短片和一部電影，現實中和女朋友結為妻妻。</p>
+<p>短片《Girl Night Stand》風格幽默、輕鬆，Jenna飾演的Katie作為新姬仔顯得笨拙緊張又很可愛。</p>
+<p>電影《Lez bomb》2018年就上映了，當時看到預告片覺得很有趣，但完全忘記了電影名字的我還是到了19年才終於看到。</p>
+<p>電影描述Jenna飾演的Lauren想要在感恩節帶著女友出櫃，可還沒說出口，不請自來的男室友突然出現害得她父母以為她的男朋友就是室友，後來到達的女友被誤認為是閨蜜。於是Lauren就在各種家庭哭笑不得的煩心事中努力出櫃。</p>
+<p>劇情笑點其實不多，家庭角色間的插嘴、轉話題、不聽人話倒是讓人真的覺得挺鬧心的，主角Lauren逃避來逃避去不敢直接出櫃也讓人抓狂，但最最最最讓人慶倖的一點是：這是一部喜劇，皆大歡喜的結局。而其中有幾點忍不住讓人思考。</p>
+<hr>
+<h2><span id="i-dont-wanna-be-gay">I don’t wanna be gay.</span></h2>
+ <p><center><img src="https://i.imgur.com/jNg73YX.jpg" width="80%" height="80%"></center></p>
+<p>不是不想喜歡女人，而是不想成為那個必須要跟家人出櫃的群族。<br>
+如果這一句表達的意思真的是如同我所想的這樣，那麼我很佩服Jenna寫得如此直接。</p>
+<p>因為像在《Love，simon》中主角Simon也有一樣的煩惱：<strong>為什麼我們要出櫃？為什麼異性戀就不用出櫃，為什麼每個人都假設我喜歡的是異性？</strong></p>
+<p>然後就是一段顯得有點可笑的“假使異性戀出櫃”片段，但這些看似好笑的片段卻是幾乎每一個同性戀必經的階段，只是早與晚的問題。</p>
+<p>在電影中Lauren一次又一次向父母出櫃，但一次又一次地“剛好”被打斷或時機不對。到了最後她也崩潰了，<strong>為什麼她必須要說出口，為什麼她必須要看著自己最親的人對自己展露出不敢相信的眼神，為什麼她要承擔那一份會被討厭的可能性？</strong></p>
+<p>所以，她愛Hailey，但她不想出櫃，不想成為同性戀。</p>
+ <p><center><img src="https://i.imgur.com/CIzmq6t.jpg" width="80%" height="80%"></center></p>
+<hr>
+<h2><span id="why-didnt-you-tell-me">Why didn’t you tell me?</span></h2>
+<p><center><img src="https://i.imgur.com/Ply90aA.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/ao1I9za.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/5SZUTFs.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/A1ZcQLz.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/pUwcOGB.jpg" width="80%" height="80%"></center></p>
+<p>“我不知道我要接受你的性向，因為我根本不知道你的性向，我一直以為你是異性戀。”</p>
+<p>這很俗套，也很真實。</p>
+<p>孩子怪父母不理解，父母怪孩子不說清楚，孩子不敢說因為父母不會理解。</p>
+<p>這件事看上去很簡單，只要兩方好好溝通就沒事，但問題是如果這對父母並沒有這麼開明呢？</p>
+<p>Lauren運氣好，50/50的機會中她得到了父母的理解和支援。<br>
+可是那些運氣不好的人呢？那些不願意理解，也假裝聽不懂的父母呢？</p>
+<p>有時候也覺得父母無辜，剛好遇上人們開始正視自己性向的年代，他們卻還停留在我以為你還是異性戀的階段，怎麼會猜到你並不是，又怎麼會猜到你正處於煎熬的狀態。<br>
+可是最怕的就是最親近的人無視你的煎熬，甚至還成為你煎熬的原因之一。</p>
+<p>不怪父母的先入為主，也不怪孩子的不敢傾訴。</p>
+<hr>
+<h2><span id="im-just-trying-to-understand-dont-get-mad">I’m just trying to understand, don’t get mad.</span></h2>
+<p><center><img src="https://i.imgur.com/x7O5v78.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/GpzrT1W.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/2HdZORh.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/ahu5QxI.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/n1C7lI3.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/tE5L6IA.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/veJhfEF.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/ok4GbZg.jpg" width="80%" height="80%"></center></p>
+ <p><center><img src="https://i.imgur.com/wWVculF.jpg" width="80%" height="80%"></center></p>
+<p>Lauren真的運氣好，有個願意嘗試去瞭解的母親。</p>
+<p>電影中不管是從母親還是從父親口中都提到了好幾次以前Lauren會跟母親無話不談，直到某天突然變了，而母親很懷念跟Lauren是閨蜜的那段日子。</p>
+<p>估計Lauren不再跟母親無話不談的時候就是意識到自己喜歡女人的時候，她害怕母親不會接納自己，所以只能把所有的事情藏在心中，也因此一次又一次地在能夠出櫃的時候退縮。不止母親懷念那段日子，想必小時候就連玩轉瓶子遊戲時都要打電話問母親該不該玩的Lauren也很懷念那個母親能夠隨時給予自己建議，支撐自己的日子。</p>
+<hr>
+<h2><span id="im-the-best-version-of-myself-with-you">I’m the best version of myself with you.</span></h2>
+<p><center><img src="https://i.imgur.com/1RzPsM3.jpg" width="80%" height="80%"></center></p>
+<p>有些人天生如此，無法改變自己的性向。有些人能夠選擇，但不夠勇氣選擇想走的路。</p>
+<p>不管是喜歡同性還是異性，當遇上那個能讓你成為The best version of you的人時就勇敢地堅持下去吧，最好還能擁有一個能夠當你堅強後盾的家庭。</p>
+<p><center><img src="https://i.imgur.com/JzL2dz1.jpg" width="80%" height="80%"></center></p>
+<p><center><img src="https://i.imgur.com/5M3chrT.jpg" width="80%" height="80%"></center></p>
+<p>如果都沒有的話，看個電影繼續撐下去吧，說不定某天你會成為別人勇敢的選擇。</p>
+<hr>
+<p>ps. &lt;Jenny’s Wedding&gt;題材也差不多，但比起本片基調偏嚴肅一點，而且兩位女主的花火感覺一般。<br>
+&lt;Sjukt oklar&gt;也是喜劇類，可惜兩位女主的對手戲實在不多。</p>
+
+                </div>
+            </div>
+    
+            <nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2020/01/01/hello-world/">
+        上一篇<br>Hello World
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2017/06/18/her/">
+        下一篇<br>Her
+    </a>
+    
+</nav>
+
+    
+            
+
+<div class="post-comment-wrapper">
+    <div id="disqus_thread"></div>
+</div>
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2020 <a href="https://jaskaye.github.io">Jas</a>
+</div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"
+        integrity="sha256-EGs9T1xMHdvM1geM8jPpoo8EZ1V1VRsmcJz8OByENLA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"
+        integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
+        integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
+<script src="/js/journal.js?99449789"></script>
+
+
+<script>
+    var disqus_shortname = 'kayejas';
+    var disqus_config = function () {
+        this.page.url = 'https://jaskaye.github.io/2019/07/23/lezbomb/';
+        this.page.identifier = '/2019/07/23/lezbomb/';
+    };
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.body || d.head).appendChild(s);
+    })();
+</script>
+
+
+</body>
+</html>
